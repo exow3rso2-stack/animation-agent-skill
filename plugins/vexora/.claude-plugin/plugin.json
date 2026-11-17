@@ -1,0 +1,8 @@
+{
+  "name": "vexora-studio",
+  "displayName": "VEXORA Studio",
+  "description": "VEXORA: a full animation-studio pipeline for vertical YouTube Shorts in a 2.5D cinematic style (volumetric stylized characters in detailed 3D worlds). Research, concept, script, character bible, storyboard, image prompts, image-to-video instructions, sound and edit plan, YouTube package and quality control, with approval gates between stages.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": ["shorts", "animation", "storyboard", "prompt-engineering", "image-to-video", "youtube", "2.5d", "cinematic"]
+}

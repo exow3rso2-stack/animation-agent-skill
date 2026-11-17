@@ -13,6 +13,12 @@
       "source": "./plugins/animate",
       "category": "productivity",
       "homepage": "https://github.com/nessalazne/animation-agent-skill"
+    },
+    {
+      "name": "vexora-studio",
+      "description": "VEXORA animation studio: vertical YouTube Shorts in a 2.5D cinematic style. Research, concepts, script, character bible, storyboard, image and image-to-video prompts, sound and edit plan, YouTube package and QC, with approval gates.",
+      "source": "./plugins/vexora",
+      "category": "productivity"
     }
   ]
 }
