@@ -77,18 +77,81 @@ room = filt(rng.uniform(-1, 1, N), 'low', 300) * .05 + np.sin(2 * np.pi * 60 * n
 room[int(12.5 * SR):int(15.0 * SR)] *= .15; room[int(19.9 * SR):] = 0
 L += room; R += room
 
-# ---- music: curious plucks (2.0–4.8), zero-g pad (8.3–12.4), relief (15.2–17.9)
-B = 60 / 104; pcache = {}
-def P(m, d=.5):
-    if (m, d) not in pcache: pcache[(m, d)] = pluck(note(m), d)
-    return pcache[(m, d)]
-seq = [62, 69, 65, 69, 62, 70, 65, 70]
-t = 2.0; i = 0
-while t < 4.75: put(P(seq[i % 8]), t, .22, -.3 + .6 * (i % 2)); put(P(seq[i % 8] - 24, .4), t, .12) if i % 4 == 0 else None; t += B / 2; i += 1
-pad_t = tt(4.1); pad = sum(np.sin(2 * np.pi * note(m) * pad_t + np.sin(pad_t * .7 + m)) for m in [50, 57, 62, 64, 69]) * .05
-pad *= adsr(len(pad_t), 1.0, .2) * (1 + .3 * np.sin(2 * np.pi * .5 * pad_t)); put(pad, 8.3, 1.0)
-t = 15.25; i = 0; rel = [60, 67, 64, 67, 60, 67, 65, 69]
-while t < 17.85: put(P(rel[i % 8]), t, .2, -.3 + .6 * (i % 2)); put(P(rel[i % 8] - 24, .4), t, .1) if i % 4 == 0 else None; t += B / 2; i += 1
+# ---- music: dark trailer score in D minor, 120 BPM, locked to the countdown grid
+from scipy.signal import sawtooth, fftconvolve
+ML = np.zeros(N); MR = np.zeros(N)
+def mput(x, t, g=1.0, pan=0.0):
+    i = int(t * SR); x = x[:max(0, N - i)]
+    ML[i:i + len(x)] += x * g * np.sqrt((1 - pan) / 2) * 1.41; MR[i:i + len(x)] += x * g * np.sqrt((1 + pan) / 2) * 1.41
+E8 = 0.25
+def bass(m, d=.24, cut=500):
+    t = tt(d); f = note(m)
+    x = sawtooth(2 * np.pi * f * t) * .6 + np.sin(2 * np.pi * f / 2 * t)
+    return filt(x, 'low', cut) * np.exp(-t * 7) * adsr(len(t), .004, .03)
+def arp(m, d=.22, cut=2600):
+    t = tt(d); f = note(m)
+    x = sawtooth(2 * np.pi * f * t) + .5 * np.sign(np.sin(2 * np.pi * f * 1.003 * t))
+    return filt(x, 'low', cut) * np.exp(-t * 11) * adsr(len(t), .003, .03) * .5
+def strings(chord, d, cut=1800, att=.5, trem=0):
+    t = tt(d); x = np.zeros(len(t))
+    for m in chord:
+        for c in (-8, 0, 7): x += sawtooth(2 * np.pi * note(m) * 2 ** (c / 1200) * t + m)
+    x = filt(x / (3 * len(chord)), 'low', cut) * adsr(len(t), att, min(.4, d / 3))
+    if trem: x *= .6 + .4 * np.sin(2 * np.pi * trem * t)
+    return x
+def kick():
+    t = tt(.45); f = 45 + 110 * np.exp(-t * 30)
+    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7) + filt(rng.uniform(-1, 1, len(t)), 'high', 3000) * np.exp(-t * 200) * .3
+def taiko():
+    t = tt(1.0); f = 50 + 40 * np.exp(-t * 18)
+    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 4) + filt(rng.uniform(-1, 1, len(t)), 'band', [80, 600]) * np.exp(-t * 9) * .5
+def hat():
+    t = tt(.06); return filt(rng.uniform(-1, 1, len(t)), 'high', 7000) * np.exp(-t * 70) * .5
+def bell(m, d=1.2):
+    t = tt(d); f = note(m)
+    return (np.sin(2 * np.pi * f * t) + .4 * np.sin(2 * np.pi * f * 2.76 * t) * np.exp(-t * 4)) * np.exp(-t * 2.5) * adsr(len(t), .005, .05)
+
+Dm, Bb, Gm, A, F = [50, 53, 57], [46, 50, 53], [43, 46, 50], [45, 49, 52], [41, 45, 48]
+BASS = {'Dm': 38, 'Bb': 34, 'Gm': 31, 'A': 33, 'F': 29}
+ARP = {'Dm': [62, 65, 69, 74], 'Bb': [58, 62, 65, 70], 'Gm': [55, 58, 62, 67], 'A': [57, 61, 64, 69], 'F': [53, 57, 60, 65]}
+def section(t0, t1, prog, inten, cut0=500, cut1=900):
+    """8th-note ostinato from t0 to t1; chord changes every 8 eighths; inten 0..3 adds layers."""
+    n = int(round((t1 - t0) / E8))
+    for i in range(n):
+        t = t0 + i * E8; ch = prog[(i // 8) % len(prog)]; k = i / max(1, n - 1)
+        mput(bass(BASS[ch] + (12 if i % 8 == 7 else 0), cut=cut0 + (cut1 - cut0) * k), t, .55)
+        if inten >= 1: mput(arp(ARP[ch][i % 4] + (12 if inten >= 3 and i % 2 else 0), cut=1800 + 1500 * k), t, .22, -.5 if i % 2 else .5)
+        if inten >= 1 and i % 4 == 0: mput(kick(), t, .7)
+        if inten >= 2 and i % 2 == 1: mput(hat(), t, .35, .3)
+        if inten >= 2 and i % 8 == 4: mput(taiko(), t, .45)
+        if inten >= 3 and i % 8 == 0: mput(strings({'Dm': Dm, 'Bb': Bb, 'Gm': Gm, 'A': A, 'F': F}[ch], 8 * E8 + .3, cut=2200, att=.15), t, .35)
+# A · curiosity (press → first countdown). Grid starts on the press, so ticks land on the beat.
+mput(strings([38, 45], 2.2, cut=500, att=.8), .45, .35)
+section(2.4, 4.65, ['Dm', 'Bb'], 1)
+# B · after the floor: low drone, then the second countdown with tighter filter
+mput(strings([38, 50], 1.4, cut=400, att=.05), 4.9, .45)
+section(6.6, 7.85, ['Gm'], 1, 700, 1400)
+# C · zero gravity: full drive, strings enter
+section(8.25, 12.25, ['Dm', 'Bb', 'Gm', 'A'], 3, 700, 1600)
+# D · darkness: tremolo strings creeping up, under the heartbeat
+mput(strings([62, 69, 74], 2.3, cut=1500, att=1.6, trem=11) * np.linspace(.2, 1, int(2.3 * SR)) ** 2, 12.55, .3)
+# E · false relief: warm F major, bells, no drums
+mput(strings([53, 57, 60, 64], 2.9, cut=1300, att=.6), 15.0, .38)
+for j, m in enumerate([72, 76, 79, 77, 76, 72]): mput(bell(m), 15.15 + j * .42, .12, -.4 + .16 * j)
+mput(bell(38 + 24, 1.6), 15.0, .15)
+# F · the last countdown: pulse on Lumo's ticks, A-major dominant swelling, hard stop on the cut
+for i in range(6):
+    t = 17.9 + i * .35; mput(bass(33, .3, 600 + 200 * i), t, .6); mput(kick(), t, .6 if i % 2 == 0 else .35)
+    mput(arp([57, 61, 64, 69][i % 4] + 12, cut=2500 + 400 * i), t, .2, .5 if i % 2 else -.5)
+mput(strings([45, 57, 61, 64, 69], 2.0, cut=2600, att=1.5), 17.9, .45)
+mput(taiko(), 18.6, .6); mput(taiko(), 19.3, .7)
+mus = np.stack([ML, MR], 1)
+mus[int(19.9 * SR):] = 0
+# short hall reverb on the score
+ir = rng.uniform(-1, 1, int(1.6 * SR)) * np.exp(-np.arange(int(1.6 * SR)) / SR * 3.2); ir = filt(ir, 'low', 5000); ir /= np.abs(ir).sum() / 6
+for c in range(2): mus[:, c] = mus[:, c] * .8 + fftconvolve(mus[:, c], ir)[:N] * .35
+mus[int(19.9 * SR):] *= np.linspace(1, 0, N - int(19.9 * SR))[:, None] * 0
+L += mus[:, 0] * 1.1; R += mus[:, 1] * 1.1
 
 # ---- events (times match anim.js)
 PRESS, DEL_FLOOR, DEL_GRAV, DEL_LIGHT, SMASH, CUT = .40, 4.9, 8.1, 12.5, 14.9, 19.9
