@@ -163,7 +163,7 @@ scene('graph', TG.start, TG.end,
       // calendar card
       const ca = E.o(P(t, TG.y1 - 1.3, 0.4)) * (1 - E.io(P(t, TG.quit0, 0.5))) * da;
       if (ca > 0) {
-        const cx = 610, cy = 360;
+        const cx = 640, cy = 520;
         let big, lab;
         if (t < TG.y1) { big = Math.max(1, Math.round(12 * E.io(P(t, TG.y1 - 1.1, 1.1)))); lab = 'МЕСЯЦЕВ'; if (big === 12) { big = 1; lab = 'ГОД'; } }
         else if (t < TG.y10a) { big = 1; lab = 'ГОД'; }
