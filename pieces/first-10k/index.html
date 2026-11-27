@@ -1,0 +1,2290 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Первые $10 000</title>
+<style>html,body{margin:0;background:#03070f;height:100%;overflow:hidden}body{display:flex;align-items:center;justify-content:center}canvas{width:min(100vw,calc(100vh*16/9));height:auto;display:block}</style></head><body>
+<canvas id="c" width="1920" height="1080"></canvas><script>
+window.VOICE = {
+ "duration": 75.529,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Первые десять тысяч долларов заработать сложнее, чем следующие сто тысяч.",
+   "t0": 0.6,
+   "t1": 5.0,
+   "words": [
+    {
+     "w": "Первые",
+     "t0": 0.588,
+     "t1": 0.968
+    },
+    {
+     "w": "десять",
+     "t0": 0.968,
+     "t1": 1.228
+    },
+    {
+     "w": "тысяч",
+     "t0": 1.228,
+     "t1": 1.548
+    },
+    {
+     "w": "долларов",
+     "t0": 1.548,
+     "t1": 1.988
+    },
+    {
+     "w": "заработать",
+     "t0": 1.988,
+     "t1": 2.568
+    },
+    {
+     "w": "сложнее,",
+     "t0": 2.568,
+     "t1": 3.068
+    },
+    {
+     "w": "чем",
+     "t0": 3.268,
+     "t1": 3.368
+    },
+    {
+     "w": "следующие",
+     "t0": 3.368,
+     "t1": 4.088
+    },
+    {
+     "w": "сто",
+     "t0": 4.088,
+     "t1": 4.328
+    },
+    {
+     "w": "тысяч.",
+     "t0": 4.328,
+     "t1": 4.648
+    }
+   ]
+  },
+  {
+   "id": "line",
+   "text": "Большинство думает, что деньги растут по прямой.",
+   "t0": 5.55,
+   "t1": 8.503,
+   "words": [
+    {
+     "w": "Большинство",
+     "t0": 5.531,
+     "t1": 6.111
+    },
+    {
+     "w": "думает,",
+     "t0": 6.111,
+     "t1": 6.471
+    },
+    {
+     "w": "что",
+     "t0": 6.571,
+     "t1": 6.671
+    },
+    {
+     "w": "деньги",
+     "t0": 6.671,
+     "t1": 6.971
+    },
+    {
+     "w": "растут",
+     "t0": 6.971,
+     "t1": 7.411
+    },
+    {
+     "w": "по",
+     "t0": 7.411,
+     "t1": 7.571
+    },
+    {
+     "w": "прямой.",
+     "t0": 7.571,
+     "t1": 8.011
+    }
+   ]
+  },
+  {
+   "id": "years",
+   "text": "Если первые десять тысяч заняли год — следующие сто займут десять лет.",
+   "t0": 8.803,
+   "t1": 13.54,
+   "words": [
+    {
+     "w": "Если",
+     "t0": 8.803,
+     "t1": 9.063
+    },
+    {
+     "w": "первые",
+     "t0": 9.063,
+     "t1": 9.483
+    },
+    {
+     "w": "десять",
+     "t0": 9.483,
+     "t1": 9.723
+    },
+    {
+     "w": "тысяч",
+     "t0": 9.723,
+     "t1": 10.063
+    },
+    {
+     "w": "заняли",
+     "t0": 10.063,
+     "t1": 10.523
+    },
+    {
+     "w": "год",
+     "t0": 10.523,
+     "t1": 10.763
+    },
+    {
+     "w": "следующие",
+     "t0": 11.163,
+     "t1": 11.603
+    },
+    {
+     "w": "сто",
+     "t0": 11.603,
+     "t1": 11.823
+    },
+    {
+     "w": "займут",
+     "t0": 11.823,
+     "t1": 12.303
+    },
+    {
+     "w": "десять",
+     "t0": 12.303,
+     "t1": 12.563
+    },
+    {
+     "w": "лет.",
+     "t0": 12.563,
+     "t1": 12.863
+    }
+   ]
+  },
+  {
+   "id": "quit",
+   "text": "Они считают это... и сдаются, даже не начав.",
+   "t0": 13.89,
+   "t1": 17.001,
+   "words": [
+    {
+     "w": "Они",
+     "t0": 13.89,
+     "t1": 14.13
+    },
+    {
+     "w": "считают",
+     "t0": 14.13,
+     "t1": 14.61
+    },
+    {
+     "w": "это...",
+     "t0": 14.61,
+     "t1": 14.83
+    },
+    {
+     "w": "и",
+     "t0": 14.83,
+     "t1": 15.33
+    },
+    {
+     "w": "сдаются,",
+     "t0": 15.33,
+     "t1": 15.83
+    },
+    {
+     "w": "даже",
+     "t0": 15.95,
+     "t1": 16.23
+    },
+    {
+     "w": "не",
+     "t0": 16.23,
+     "t1": 16.37
+    },
+    {
+     "w": "начав.",
+     "t0": 16.37,
+     "t1": 16.81
+    }
+   ]
+  },
+  {
+   "id": "break",
+   "text": "Но рост работает не так.",
+   "t0": 17.351,
+   "t1": 18.58,
+   "words": [
+    {
+     "w": "Но",
+     "t0": 17.308,
+     "t1": 17.468
+    },
+    {
+     "w": "рост",
+     "t0": 17.468,
+     "t1": 17.668
+    },
+    {
+     "w": "работает",
+     "t0": 17.668,
+     "t1": 17.968
+    },
+    {
+     "w": "не",
+     "t0": 17.968,
+     "t1": 18.168
+    },
+    {
+     "w": "так.",
+     "t0": 18.168,
+     "t1": 18.388
+    }
+   ]
+  },
+  {
+   "id": "start",
+   "text": "Представь человека на старте. Ни аудитории, ни продукта, ни доказательств, что хоть что-то работает.",
+   "t0": 19.18,
+   "t1": 25.113,
+   "words": [
+    {
+     "w": "Представь",
+     "t0": 19.18,
+     "t1": 19.794
+    },
+    {
+     "w": "человека",
+     "t0": 19.794,
+     "t1": 20.339
+    },
+    {
+     "w": "на",
+     "t0": 20.339,
+     "t1": 20.476
+    },
+    {
+     "w": "старте.",
+     "t0": 20.476,
+     "t1": 20.953
+    },
+    {
+     "w": "Ни",
+     "t0": 20.953,
+     "t1": 21.089
+    },
+    {
+     "w": "аудитории,",
+     "t0": 21.089,
+     "t1": 21.771
+    },
+    {
+     "w": "ни",
+     "t0": 21.771,
+     "t1": 21.908
+    },
+    {
+     "w": "продукта,",
+     "t0": 21.908,
+     "t1": 22.522
+    },
+    {
+     "w": "ни",
+     "t0": 22.522,
+     "t1": 22.658
+    },
+    {
+     "w": "доказательств,",
+     "t0": 22.658,
+     "t1": 23.613
+    },
+    {
+     "w": "что",
+     "t0": 23.613,
+     "t1": 23.817
+    },
+    {
+     "w": "хоть",
+     "t0": 23.817,
+     "t1": 24.09
+    },
+    {
+     "w": "что-то",
+     "t0": 24.09,
+     "t1": 24.499
+    },
+    {
+     "w": "работает.",
+     "t0": 24.499,
+     "t1": 25.113
+    }
+   ]
+  },
+  {
+   "id": "posts",
+   "text": "Он постит неделями — тишина.",
+   "t0": 25.463,
+   "t1": 27.792,
+   "words": [
+    {
+     "w": "Он",
+     "t0": 25.423,
+     "t1": 25.623
+    },
+    {
+     "w": "постит",
+     "t0": 25.623,
+     "t1": 26.023
+    },
+    {
+     "w": "неделями",
+     "t0": 26.023,
+     "t1": 26.583
+    },
+    {
+     "w": "тишина.",
+     "t0": 26.583,
+     "t1": 27.203
+    }
+   ]
+  },
+  {
+   "id": "launch",
+   "text": "Запускает первый продукт — и получает сорок долларов.",
+   "t0": 28.142,
+   "t1": 31.718,
+   "words": [
+    {
+     "w": "Запускает",
+     "t0": 28.142,
+     "t1": 28.782
+    },
+    {
+     "w": "первый",
+     "t0": 28.782,
+     "t1": 28.982
+    },
+    {
+     "w": "продукт",
+     "t0": 28.982,
+     "t1": 29.862
+    },
+    {
+     "w": "и",
+     "t0": 29.862,
+     "t1": 29.962
+    },
+    {
+     "w": "получает",
+     "t0": 29.962,
+     "t1": 30.522
+    },
+    {
+     "w": "сорок",
+     "t0": 30.522,
+     "t1": 30.822
+    },
+    {
+     "w": "долларов.",
+     "t0": 30.822,
+     "t1": 31.162
+    }
+   ]
+  },
+  {
+   "id": "stairs",
+   "text": "Отсюда десять тысяч кажутся невозможными. А сто тысяч — просто шуткой.",
+   "t0": 32.168,
+   "t1": 37.21,
+   "words": [
+    {
+     "w": "Отсюда",
+     "t0": 32.149,
+     "t1": 32.589
+    },
+    {
+     "w": "десять",
+     "t0": 32.589,
+     "t1": 32.929
+    },
+    {
+     "w": "тысяч",
+     "t0": 32.929,
+     "t1": 33.409
+    },
+    {
+     "w": "кажутся",
+     "t0": 33.609,
+     "t1": 33.969
+    },
+    {
+     "w": "невозможными.",
+     "t0": 33.969,
+     "t1": 34.689
+    },
+    {
+     "w": "А",
+     "t0": 35.009,
+     "t1": 35.089
+    },
+    {
+     "w": "сто",
+     "t0": 35.089,
+     "t1": 35.289
+    },
+    {
+     "w": "тысяч",
+     "t0": 35.289,
+     "t1": 35.689
+    },
+    {
+     "w": "просто",
+     "t0": 35.689,
+     "t1": 36.149
+    },
+    {
+     "w": "шуткой.",
+     "t0": 36.149,
+     "t1": 36.789
+    }
+   ]
+  },
+  {
+   "id": "blind",
+   "text": "Но он пока не видит главного.",
+   "t0": 37.56,
+   "t1": 39.19,
+   "words": [
+    {
+     "w": "Но",
+     "t0": 37.544,
+     "t1": 37.704
+    },
+    {
+     "w": "он",
+     "t0": 37.704,
+     "t1": 37.784
+    },
+    {
+     "w": "пока",
+     "t0": 37.784,
+     "t1": 38.024
+    },
+    {
+     "w": "не",
+     "t0": 38.024,
+     "t1": 38.184
+    },
+    {
+     "w": "видит",
+     "t0": 38.184,
+     "t1": 38.424
+    },
+    {
+     "w": "главного.",
+     "t0": 38.424,
+     "t1": 38.864
+    }
+   ]
+  },
+  {
+   "id": "top",
+   "text": "Тот, кто дошёл до десяти тысяч, получил не просто деньги.",
+   "t0": 40.49,
+   "t1": 43.868,
+   "words": [
+    {
+     "w": "Тот,",
+     "t0": 40.389,
+     "t1": 40.649
+    },
+    {
+     "w": "кто",
+     "t0": 40.709,
+     "t1": 40.829
+    },
+    {
+     "w": "дошёл",
+     "t0": 40.829,
+     "t1": 41.149
+    },
+    {
+     "w": "до",
+     "t0": 41.149,
+     "t1": 41.229
+    },
+    {
+     "w": "десяти",
+     "t0": 41.229,
+     "t1": 41.489
+    },
+    {
+     "w": "тысяч,",
+     "t0": 41.489,
+     "t1": 41.949
+    },
+    {
+     "w": "получил",
+     "t0": 42.129,
+     "t1": 42.569
+    },
+    {
+     "w": "не",
+     "t0": 42.569,
+     "t1": 42.669
+    },
+    {
+     "w": "просто",
+     "t0": 42.669,
+     "t1": 42.949
+    },
+    {
+     "w": "деньги.",
+     "t0": 42.949,
+     "t1": 43.329
+    }
+   ]
+  },
+  {
+   "id": "knows",
+   "text": "Он знает, какой пост выстреливает. И за что люди реально платят.",
+   "t0": 44.168,
+   "t1": 47.604,
+   "words": [
+    {
+     "w": "Он",
+     "t0": 44.168,
+     "t1": 44.368
+    },
+    {
+     "w": "знает,",
+     "t0": 44.368,
+     "t1": 44.648
+    },
+    {
+     "w": "какой",
+     "t0": 44.728,
+     "t1": 44.928
+    },
+    {
+     "w": "пост",
+     "t0": 44.928,
+     "t1": 45.268
+    },
+    {
+     "w": "выстреливает.",
+     "t0": 45.268,
+     "t1": 45.988
+    },
+    {
+     "w": "И",
+     "t0": 45.988,
+     "t1": 46.188
+    },
+    {
+     "w": "за",
+     "t0": 46.188,
+     "t1": 46.348
+    },
+    {
+     "w": "что",
+     "t0": 46.348,
+     "t1": 46.528
+    },
+    {
+     "w": "люди",
+     "t0": 46.528,
+     "t1": 46.668
+    },
+    {
+     "w": "реально",
+     "t0": 46.668,
+     "t1": 46.948
+    },
+    {
+     "w": "платят.",
+     "t0": 46.948,
+     "t1": 47.508
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "text": "У него есть продукт, первые клиенты и система, которая больше не зависит от удачи.",
+   "t0": 47.954,
+   "t1": 53.429,
+   "words": [
+    {
+     "w": "У",
+     "t0": 47.902,
+     "t1": 48.062
+    },
+    {
+     "w": "него",
+     "t0": 48.062,
+     "t1": 48.242
+    },
+    {
+     "w": "есть",
+     "t0": 48.242,
+     "t1": 48.482
+    },
+    {
+     "w": "продукт,",
+     "t0": 48.482,
+     "t1": 49.162
+    },
+    {
+     "w": "первые",
+     "t0": 49.222,
+     "t1": 49.642
+    },
+    {
+     "w": "клиенты",
+     "t0": 49.642,
+     "t1": 50.102
+    },
+    {
+     "w": "и",
+     "t0": 50.102,
+     "t1": 50.322
+    },
+    {
+     "w": "система,",
+     "t0": 50.322,
+     "t1": 50.742
+    },
+    {
+     "w": "которая",
+     "t0": 51.002,
+     "t1": 51.342
+    },
+    {
+     "w": "больше",
+     "t0": 51.342,
+     "t1": 51.722
+    },
+    {
+     "w": "не",
+     "t0": 51.722,
+     "t1": 51.962
+    },
+    {
+     "w": "зависит",
+     "t0": 51.962,
+     "t1": 52.422
+    },
+    {
+     "w": "от",
+     "t0": 52.422,
+     "t1": 52.582
+    },
+    {
+     "w": "удачи.",
+     "t0": 52.582,
+     "t1": 53.062
+    }
+   ]
+  },
+  {
+   "id": "battle",
+   "text": "Поэтому путь к ста тысячам — это не новая битва.",
+   "t0": 53.829,
+   "t1": 56.998,
+   "words": [
+    {
+     "w": "Поэтому",
+     "t0": 53.784,
+     "t1": 54.144
+    },
+    {
+     "w": "путь",
+     "t0": 54.144,
+     "t1": 54.524
+    },
+    {
+     "w": "к",
+     "t0": 54.524,
+     "t1": 54.624
+    },
+    {
+     "w": "ста",
+     "t0": 54.624,
+     "t1": 54.784
+    },
+    {
+     "w": "тысячам",
+     "t0": 54.784,
+     "t1": 55.384
+    },
+    {
+     "w": "это",
+     "t0": 55.544,
+     "t1": 55.704
+    },
+    {
+     "w": "не",
+     "t0": 55.704,
+     "t1": 55.844
+    },
+    {
+     "w": "новая",
+     "t0": 55.844,
+     "t1": 56.184
+    },
+    {
+     "w": "битва.",
+     "t0": 56.184,
+     "t1": 56.564
+    }
+   ]
+  },
+  {
+   "id": "repeat",
+   "text": "Это повторить то, что уже работает. Ещё девять раз.",
+   "t0": 57.248,
+   "t1": 60.547,
+   "words": [
+    {
+     "w": "Это",
+     "t0": 57.236,
+     "t1": 57.456
+    },
+    {
+     "w": "повторить",
+     "t0": 57.456,
+     "t1": 57.956
+    },
+    {
+     "w": "то,",
+     "t0": 57.956,
+     "t1": 58.116
+    },
+    {
+     "w": "что",
+     "t0": 58.176,
+     "t1": 58.296
+    },
+    {
+     "w": "уже",
+     "t0": 58.296,
+     "t1": 58.476
+    },
+    {
+     "w": "работает.",
+     "t0": 58.476,
+     "t1": 59.016
+    },
+    {
+     "w": "Ещё",
+     "t0": 59.016,
+     "t1": 59.416
+    },
+    {
+     "w": "девять",
+     "t0": 59.416,
+     "t1": 59.716
+    },
+    {
+     "w": "раз.",
+     "t0": 59.716,
+     "t1": 60.036
+    }
+   ]
+  },
+  {
+   "id": "notmoney",
+   "text": "Первые десять тысяч — это не про деньги.",
+   "t0": 61.147,
+   "t1": 63.469,
+   "words": [
+    {
+     "w": "Первые",
+     "t0": 61.053,
+     "t1": 61.453
+    },
+    {
+     "w": "десять",
+     "t0": 61.453,
+     "t1": 61.713
+    },
+    {
+     "w": "тысяч",
+     "t0": 61.713,
+     "t1": 62.133
+    },
+    {
+     "w": "это",
+     "t0": 62.133,
+     "t1": 62.533
+    },
+    {
+     "w": "не",
+     "t0": 62.533,
+     "t1": 62.653
+    },
+    {
+     "w": "про",
+     "t0": 62.653,
+     "t1": 62.813
+    },
+    {
+     "w": "деньги.",
+     "t0": 62.813,
+     "t1": 63.093
+    }
+   ]
+  },
+  {
+   "id": "machine",
+   "text": "Это про то, чтобы построить машину.",
+   "t0": 63.719,
+   "t1": 65.854,
+   "words": [
+    {
+     "w": "Это",
+     "t0": 63.719,
+     "t1": 63.919
+    },
+    {
+     "w": "про",
+     "t0": 63.919,
+     "t1": 64.139
+    },
+    {
+     "w": "то,",
+     "t0": 64.139,
+     "t1": 64.279
+    },
+    {
+     "w": "чтобы",
+     "t0": 64.319,
+     "t1": 64.499
+    },
+    {
+     "w": "построить",
+     "t0": 64.499,
+     "t1": 65.039
+    },
+    {
+     "w": "машину.",
+     "t0": 65.039,
+     "t1": 65.499
+    }
+   ]
+  },
+  {
+   "id": "easier",
+   "text": "А когда она есть — каждый следующий доллар даётся легче предыдущего.",
+   "t0": 66.254,
+   "t1": 70.107,
+   "words": [
+    {
+     "w": "А",
+     "t0": 66.252,
+     "t1": 66.352
+    },
+    {
+     "w": "когда",
+     "t0": 66.352,
+     "t1": 66.552
+    },
+    {
+     "w": "она",
+     "t0": 66.552,
+     "t1": 66.792
+    },
+    {
+     "w": "есть",
+     "t0": 66.792,
+     "t1": 67.112
+    },
+    {
+     "w": "каждый",
+     "t0": 67.312,
+     "t1": 67.492
+    },
+    {
+     "w": "следующий",
+     "t0": 67.492,
+     "t1": 67.972
+    },
+    {
+     "w": "доллар",
+     "t0": 67.972,
+     "t1": 68.192
+    },
+    {
+     "w": "даётся",
+     "t0": 68.192,
+     "t1": 68.592
+    },
+    {
+     "w": "легче",
+     "t0": 68.592,
+     "t1": 69.092
+    },
+    {
+     "w": "предыдущего.",
+     "t0": 69.092,
+     "t1": 69.852
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "text": "Строй машину. Деньги придут следом.",
+   "t0": 70.607,
+   "t1": 72.929,
+   "words": [
+    {
+     "w": "Строй",
+     "t0": 70.607,
+     "t1": 70.947
+    },
+    {
+     "w": "машину.",
+     "t0": 70.947,
+     "t1": 71.347
+    },
+    {
+     "w": "Деньги",
+     "t0": 71.527,
+     "t1": 71.847
+    },
+    {
+     "w": "придут",
+     "t0": 71.847,
+     "t1": 72.127
+    },
+    {
+     "w": "следом.",
+     "t0": 72.127,
+     "t1": 72.567
+    }
+   ]
+  }
+ ]
+};
+"use strict";
+// ============================================================
+//  core.js — time, easing, RNG, drawing primitives, post (bloom, vignette, grain)
+//  1920x1080 @ 60fps; everything is a pure function of time t (seconds)
+// ============================================================
+const W = 1920, H = 1080, FPS = 60;
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const VOICE = window.VOICE;
+const DURATION = Math.round(VOICE.duration * FPS) / FPS;
+const NFRAMES = Math.round(DURATION * FPS);
+
+const C = {
+  bg0: '#03070f', bg1: '#0a1a31', bg2: '#0d2340',
+  cy: '#44c6ff', cyD: '#1d7fb8', cyL: '#a9e6ff', cyGlow: 'rgba(68,198,255,0.9)',
+  wh: '#eef5ff', mu: '#8090a8', dim: '#2a3f5c', line: '#3a5677', grey: '#5d6c84', ink: '#071222',
+};
+const SANS = '"Inter Display", "Inter", "DejaVu Sans", sans-serif';
+const MONO = '"JetBrains Mono", "DejaVu Sans Mono", monospace';
+const TAU = Math.PI * 2;
+
+// ---------- math
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, u) => a + (b - a) * u;
+const P = (t, t0, d) => clamp((t - t0) / d, 0, 1);
+const E = {
+  io: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2),
+  io2: (x) => (x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2),
+  o: (x) => 1 - Math.pow(1 - x, 3),
+  o5: (x) => 1 - Math.pow(1 - x, 5),
+  i: (x) => x * x * x,
+  i2: (x) => x * x,
+  ob: (x) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); },
+  sine: (x) => -(Math.cos(Math.PI * x) - 1) / 2,
+};
+// damped spring 0 -> 1 with overshoot (closed form)
+function SPR(t, t0, f = 2.0, z = 0.42) {
+  if (t <= t0) return 0;
+  const x = t - t0, w = TAU * f, wd = w * Math.sqrt(1 - z * z);
+  return 1 - Math.exp(-z * w * x) * (Math.cos(wd * x) + (z * w / wd) * Math.sin(wd * x));
+}
+function RNG(seed) {
+  let a = 0;
+  for (const ch of String(seed)) a = (Math.imul(a ^ ch.charCodeAt(0), 2654435761) + 0x9e3779b9) | 0;
+  return () => { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+const nz1 = (x, s = 0) => Math.sin(x * 1.7 + s) * 0.5 + Math.sin(x * 2.9 + s * 1.3) * 0.3 + Math.sin(x * 5.3 + s * 2.1) * 0.2;
+
+// ---------- voice cues
+const LN = (id) => VOICE.lines.find((l) => l.id === id);
+const WT = (id, n) => LN(id).words[n].t0;                         // n-th word start
+const WE = (id, n) => LN(id).words[n].t1;                         // n-th word end
+const WF = (id, sub) => { const w = LN(id).words.find((w) => w.w.toLowerCase().includes(sub)); if (!w) throw new Error('cue ' + id + ':' + sub); return w.t0; };
+
+// ---------- sfx cues (collected by the exporter for the mix)
+const SFX = [];
+function sfx(name, t, gain = 0, opt = {}) { SFX.push({ name, t: +t.toFixed(4), gain, ...opt }); }
+
+// ---------- money formatting
+const money = (n) => '$' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+const num = (n) => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+
+// ---------- drawing primitives
+function rr(x, y, w, h, r) {
+  r = Math.min(r, w / 2, h / 2);
+  ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+function glow(color = C.cyGlow, blur = 24) { ctx.shadowColor = color; ctx.shadowBlur = blur; }
+function noGlow() { ctx.shadowBlur = 0; ctx.shadowColor = 'transparent'; }
+function font(size, weight = 800, fam = SANS) { ctx.font = `${weight} ${size}px ${fam}`; }
+function T(str, x, y, o = {}) {
+  const s = o.s || 40;
+  ctx.save();
+  font(s, o.w || 800, o.f || SANS);
+  ctx.textAlign = o.al || 'center'; ctx.textBaseline = o.bl || 'middle';
+  ctx.letterSpacing = (o.ls || 0) + 'px';
+  ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  ctx.fillStyle = o.c || C.wh;
+  if (o.g) glow(o.gc || C.cyGlow, o.g);
+  if (o.sc && o.sc !== 1) { ctx.translate(x, y); ctx.scale(o.sc, o.sc); x = 0; y = 0; }
+  ctx.fillText(str, x, y);
+  if (o.stroke) { noGlow(); ctx.lineWidth = o.stroke; ctx.strokeStyle = o.sk || C.ink; ctx.strokeText(str, x, y); }
+  ctx.restore();
+}
+function TW(str, s, w = 800, fam = SANS, ls = 0) { ctx.save(); font(s, w, fam); ctx.letterSpacing = ls + 'px'; const m = ctx.measureText(str).width; ctx.restore(); return m; }
+
+// pill label (white capsule, dark caps text) — pops in with a spring
+function pill(str, x, y, t, t0, o = {}) {
+  if (t < t0) return;
+  const k = o.k == null ? SPR(t, t0, 2.4, 0.5) : o.k;
+  const a = clamp((t - t0) / 0.12) * (o.a == null ? 1 : o.a);
+  const s = o.s || 22, pw = TW(str, s, 800, SANS, 1.2) + s * 1.6, ph = s * 1.9;
+  ctx.save(); ctx.translate(x, y); ctx.scale(k, k); ctx.globalAlpha *= a;
+  if (o.dark) { ctx.fillStyle = 'rgba(10,22,40,0.92)'; rr(-pw / 2, -ph / 2, pw, ph, ph / 2); ctx.fill(); ctx.strokeStyle = o.dark; ctx.lineWidth = 2; ctx.stroke(); }
+  else { glow('rgba(160,220,255,0.55)', 18); ctx.fillStyle = o.bg || '#f4f8ff'; rr(-pw / 2, -ph / 2, pw, ph, ph / 2); ctx.fill(); noGlow(); }
+  T(str, 0, 1, { s, w: 800, c: o.dark ? (o.tc || C.wh) : (o.tc || '#0a1424'), ls: 1.2 });
+  ctx.restore();
+}
+
+// the hero: a glowing "user" glyph. (x,y) = feet. h = height.
+function hero(x, y, h, o = {}) {
+  const c = o.c || C.cy, a = o.a == null ? 1 : o.a;
+  if (a <= 0) return;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(o.lean || 0);
+  const br = 1 + Math.sin((o.t || 0) * 2.4 + (o.ph || 0)) * 0.012;     // breathing
+  ctx.scale(o.flip ? -1 : 1, br);
+  ctx.globalAlpha *= a;
+  const hw = h * 0.36, bodyH = h * 0.5, headR = h * 0.2, headY = -bodyH - headR * 1.12 - (o.hop || 0);
+  const grd = ctx.createLinearGradient(0, -h, 0, 0);
+  grd.addColorStop(0, o.c2 || C.cyL); grd.addColorStop(1, c);
+  if (o.glow !== 0) glow(o.gc || 'rgba(68,198,255,0.75)', o.glow || h * 0.35);
+  ctx.fillStyle = o.fill || grd;
+  // torso: dome + flat base
+  ctx.beginPath(); ctx.moveTo(-hw, 0); ctx.lineTo(-hw, -bodyH * 0.45);
+  ctx.bezierCurveTo(-hw, -bodyH * 1.05, hw, -bodyH * 1.05, hw, -bodyH * 0.45); ctx.lineTo(hw, 0); ctx.closePath(); ctx.fill();
+  ctx.beginPath(); ctx.arc(o.headX || 0, headY, headR, 0, TAU); ctx.fill();
+  noGlow();
+  ctx.restore();
+}
+// grey crowd member
+const grey = (x, y, h, o = {}) => hero(x, y, h, { c: '#46566e', c2: '#6c7d97', glow: 0, ...o });
+
+// outlined card
+function card(x, y, w, h, o = {}) {
+  ctx.save();
+  ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  ctx.fillStyle = o.fill || 'rgba(9,20,38,0.88)'; rr(x, y, w, h, o.r || 16); ctx.fill();
+  if (o.glowc) glow(o.glowc, o.gb || 26);
+  ctx.strokeStyle = o.sc || 'rgba(200,220,245,0.75)'; ctx.lineWidth = o.lw || 2.5; rr(x, y, w, h, o.r || 16); ctx.stroke();
+  noGlow(); ctx.restore();
+}
+function line(pts, o = {}) {
+  ctx.save(); ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+  ctx.strokeStyle = o.c || C.wh; ctx.lineWidth = o.lw || 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  if (o.dash) ctx.setLineDash(o.dash); if (o.off) ctx.lineDashOffset = o.off;
+  ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  if (o.g) glow(o.gc || C.cyGlow, o.g);
+  ctx.stroke(); ctx.restore();
+}
+// part of a polyline by arc-length fraction
+function sub(pts, f) {
+  if (f >= 1) return pts; if (f <= 0) return [pts[0]];
+  let tot = 0; const L = [0]; for (let i = 1; i < pts.length; i++) { tot += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); L.push(tot); }
+  const tgt = tot * f, out = [pts[0]];
+  for (let i = 1; i < pts.length; i++) {
+    if (L[i] < tgt) { out.push(pts[i]); continue; }
+    const u = (tgt - L[i - 1]) / (L[i] - L[i - 1] || 1); out.push([lerp(pts[i - 1][0], pts[i][0], u), lerp(pts[i - 1][1], pts[i][1], u)]); break;
+  }
+  return out;
+}
+function ptAt(pts, f) { const s = sub(pts, clamp(f, 0.0001, 1)); return s[s.length - 1]; }
+function resamp(pts, n) { const out = []; for (let i = 0; i < n; i++) out.push(ptAt(pts, i / (n - 1))); return out; }
+
+// little "grass" ticks along a polyline (from the reference's ground language)
+function ticks(pts, t, o = {}) {
+  const R = RNG(o.seed || 'tk'), n = o.n || 40;
+  ctx.save(); ctx.strokeStyle = o.c || 'rgba(160,190,225,0.55)'; ctx.lineWidth = 1.6; ctx.lineCap = 'round';
+  for (let i = 0; i < n; i++) {
+    const f = (i + R() * 0.6) / n, p = ptAt(pts, f), q = ptAt(pts, Math.min(1, f + 0.002));
+    const ang = Math.atan2(q[1] - p[1], q[0] - p[0]), s = 7 + R() * 6, sw = Math.sin(t * 2 + i) * 0.15;
+    ctx.save(); ctx.translate(p[0], p[1]); ctx.rotate(ang);
+    ctx.beginPath(); ctx.moveTo(-s * 0.4, -s); ctx.lineTo(0, -1); ctx.lineTo(s * 0.4 + sw * s, -s); ctx.stroke(); ctx.restore();
+  }
+  ctx.restore();
+}
+// gear outline
+function gear(x, y, r, rot, o = {}) {
+  const n = o.n || 8, ri = r * 0.78;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot);
+  ctx.beginPath();
+  for (let i = 0; i < n; i++) {
+    const a0 = (i / n) * TAU, a1 = a0 + TAU / n * 0.25, a2 = a0 + TAU / n * 0.5, a3 = a0 + TAU / n * 0.75;
+    ctx.lineTo(Math.cos(a0) * ri, Math.sin(a0) * ri); ctx.lineTo(Math.cos(a1) * r, Math.sin(a1) * r);
+    ctx.lineTo(Math.cos(a2) * r, Math.sin(a2) * r); ctx.lineTo(Math.cos(a3) * ri, Math.sin(a3) * ri);
+  }
+  ctx.closePath();
+  ctx.lineWidth = o.lw || 3; ctx.strokeStyle = o.c || C.cyL; if (o.g) glow(C.cyGlow, o.g);
+  if (o.fill) { ctx.fillStyle = o.fill; ctx.fill(); }
+  ctx.stroke(); noGlow();
+  ctx.beginPath(); ctx.arc(0, 0, r * 0.3, 0, TAU); ctx.stroke();
+  ctx.restore();
+}
+// coin (front view or edge-on)
+function coin(x, y, r, o = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(o.rot || 0); ctx.scale(o.sx == null ? 1 : o.sx, 1);
+  ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  if (o.g !== 0) glow('rgba(68,198,255,0.8)', o.g || r);
+  ctx.fillStyle = o.fill || C.cy; ctx.beginPath(); ctx.arc(0, 0, r, 0, TAU); ctx.fill(); noGlow();
+  ctx.strokeStyle = 'rgba(230,248,255,0.9)'; ctx.lineWidth = Math.max(1.2, r * 0.09); ctx.beginPath(); ctx.arc(0, 0, r * 0.72, 0, TAU); ctx.stroke();
+  T('$', 0, r * 0.04, { s: r * 1.0, w: 900, c: '#04223a' });
+  ctx.restore();
+}
+// flat stacked coin (ellipse) for stacks
+function coinFlat(x, y, r, o = {}) {
+  ctx.save(); ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  ctx.fillStyle = 'rgba(8,24,44,0.95)'; ctx.strokeStyle = o.c || C.cyL; ctx.lineWidth = 2.4;
+  if (o.g) glow(C.cyGlow, o.g);
+  ctx.beginPath(); ctx.ellipse(x, y, r, r * 0.28, 0, 0, TAU); ctx.fill(); ctx.stroke(); noGlow();
+  ctx.restore();
+}
+// rotating isometric cube (the product)
+function cube(x, y, s, rot, o = {}) {
+  const v = [[-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1], [-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]];
+  const tilt = o.tilt == null ? 0.55 : o.tilt, cr = Math.cos(rot), sr = Math.sin(rot), ct = Math.cos(tilt), st = Math.sin(tilt);
+  const pr = v.map(([a, b, c]) => { const X = a * cr - c * sr, Z = a * sr + c * cr; const Y = b * ct - Z * st, Z2 = b * st + Z * ct; return [x + X * s, y + Y * s, Z2]; });
+  const faces = [[0, 1, 2, 3], [4, 5, 6, 7], [0, 1, 5, 4], [2, 3, 7, 6], [1, 2, 6, 5], [0, 3, 7, 4]];
+  const shade = ['#3fb6f0', '#2a8fcf', '#8fdcff', '#1c6aa3', '#5cc8fb', '#2f9fe0'];
+  const vis = faces.map((f, i) => ({ f, i, z: f.reduce((s, k) => s + pr[k][2], 0) / 4 })).sort((a, b) => b.z - a.z);
+  ctx.save(); ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  glow('rgba(68,198,255,0.85)', o.g || s * 0.9);
+  for (const { f, i } of vis.slice(3)) {
+    ctx.beginPath(); f.forEach((k, j) => (j ? ctx.lineTo(pr[k][0], pr[k][1]) : ctx.moveTo(pr[k][0], pr[k][1]))); ctx.closePath();
+    ctx.fillStyle = shade[i]; ctx.fill();
+  }
+  noGlow();
+  for (const { f } of vis.slice(3)) {
+    ctx.beginPath(); f.forEach((k, j) => (j ? ctx.lineTo(pr[k][0], pr[k][1]) : ctx.moveTo(pr[k][0], pr[k][1]))); ctx.closePath();
+    ctx.strokeStyle = 'rgba(220,245,255,0.7)'; ctx.lineWidth = 2; ctx.stroke();
+  }
+  ctx.restore();
+}
+// crossed-out badge
+function xmark(x, y, r, k = 1, o = {}) {
+  if (k <= 0) return;
+  ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
+  ctx.fillStyle = o.fill || '#0b1628'; ctx.strokeStyle = o.c || C.wh; ctx.lineWidth = 2.4;
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, TAU); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-r * 0.4, -r * 0.4); ctx.lineTo(r * 0.4, r * 0.4); ctx.moveTo(r * 0.4, -r * 0.4); ctx.lineTo(-r * 0.4, r * 0.4); ctx.stroke();
+  ctx.restore();
+}
+function heart(x, y, s, o = {}) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s / 20, s / 20); ctx.globalAlpha *= o.a == null ? 1 : o.a;
+  ctx.beginPath(); ctx.moveTo(0, 6); ctx.bezierCurveTo(-14, -4, -8, -16, 0, -8); ctx.bezierCurveTo(8, -16, 14, -4, 0, 6); ctx.closePath();
+  if (o.g) glow(C.cyGlow, o.g); ctx.fillStyle = o.c || C.cy; ctx.fill(); noGlow(); ctx.restore();
+}
+
+// ---------- background: deep navy, parallax dust in three depth planes (far = sharp+dim, near = big blurred bokeh)
+const DUST = [0, 1, 2].map((L) => { const R = RNG('dust' + L), n = [110, 46, 12][L]; return Array.from({ length: n }, () => ({ x: R(), y: R(), r: R(), ph: R() * TAU })); });
+let BGP = { x: 0, y: 0, dim: 0, warm: 0 };       // parallax offset (px) & dimming, set by the scene
+function background(t) {
+  const g = ctx.createRadialGradient(W * 0.5, H * 0.42, 50, W * 0.5, H * 0.5, W * 0.75);
+  g.addColorStop(0, C.bg2); g.addColorStop(0.45, C.bg1); g.addColorStop(1, C.bg0);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const depth = [0.12, 0.35, 1.1], size = [1.3, 2.6, 26], alpha = [0.5, 0.42, 0.10];
+  for (let L = 0; L < 3; L++) {
+    ctx.save();
+    if (L === 2) ctx.filter = 'blur(10px)';
+    for (const d of DUST[L]) {
+      const x = ((d.x * (W + 200) - BGP.x * depth[L] + t * 6 * depth[L]) % (W + 200) + (W + 200)) % (W + 200) - 100;
+      const y = ((d.y * (H + 200) - BGP.y * depth[L] - t * (3 + d.r * 5)) % (H + 200) + (H + 200)) % (H + 200) - 100;
+      const tw = 0.6 + 0.4 * Math.sin(t * (0.8 + d.r) + d.ph);
+      ctx.globalAlpha = alpha[L] * tw * (1 - BGP.dim * 0.8);
+      ctx.fillStyle = L === 2 ? '#5fb8ff' : '#9fd2ff';
+      ctx.beginPath(); ctx.arc(x, y, size[L] * (0.5 + d.r), 0, TAU); ctx.fill();
+    }
+    ctx.restore();
+  }
+}
+// faint perspective floor grid (ground scenes): horizon hy, ground at gy, scrolls with camera x
+function floorGrid(t, gy, camx, a = 1) {
+  ctx.save(); ctx.globalAlpha = 0.22 * a; ctx.strokeStyle = '#2d5a8a'; ctx.lineWidth = 1.2;
+  const hy = gy - 260, vx = W / 2;
+  for (let i = -22; i <= 22; i++) {
+    const bx = vx + (i * 150 - (camx % 150)) * 3.2;
+    ctx.beginPath(); ctx.moveTo(vx + (bx - vx) * 0.0 + (i * 150 - (camx % 150)) * 0.35, gy); ctx.lineTo(bx, H + 40); ctx.stroke();
+  }
+  for (let j = 0; j < 7; j++) { const yy = gy + Math.pow(j / 6, 1.8) * (H - gy + 40); ctx.globalAlpha = 0.22 * a * (0.4 + j / 10); ctx.beginPath(); ctx.moveTo(0, yy); ctx.lineTo(W, yy); ctx.stroke(); }
+  // fade near horizon
+  const fg = ctx.createLinearGradient(0, gy, 0, gy + 160); fg.addColorStop(0, 'rgba(6,15,30,0.9)'); fg.addColorStop(1, 'rgba(6,15,30,0)');
+  ctx.globalAlpha = a; ctx.fillStyle = fg; ctx.fillRect(0, gy, W, 160);
+  ctx.restore();
+}
+
+// ---------- post: bloom (two radii), vignette, grain
+const BL1 = document.createElement('canvas'); BL1.width = 480; BL1.height = 270; const b1 = BL1.getContext('2d');
+const BL2 = document.createElement('canvas'); BL2.width = 240; BL2.height = 135; const b2 = BL2.getContext('2d');
+const GR = [0, 1, 2, 3].map((k) => {
+  const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'), id = g.createImageData(256, 256), R = RNG('grain' + k);
+  for (let i = 0; i < id.data.length; i += 4) { const v = 128 + (R() - 0.5) * 120; id.data[i] = id.data[i + 1] = id.data[i + 2] = v; id.data[i + 3] = 255; }
+  g.putImageData(id, 0, 0); return c;
+});
+function post(t, o = {}) {
+  // bloom: threshold-ish via contrast, blur at two radii, add
+  b1.clearRect(0, 0, 480, 270); b1.filter = 'brightness(0.9) contrast(2.6) blur(5px)'; b1.drawImage(cv, 0, 0, 480, 270); b1.filter = 'none';
+  b2.clearRect(0, 0, 240, 135); b2.filter = 'blur(9px)'; b2.drawImage(BL1, 0, 0, 240, 135); b2.filter = 'none';
+  ctx.save(); ctx.globalCompositeOperation = 'lighter';
+  ctx.globalAlpha = 0.42 * (o.bloom || 1); ctx.drawImage(BL1, 0, 0, W, H);
+  ctx.globalAlpha = 0.55 * (o.bloom || 1); ctx.drawImage(BL2, 0, 0, W, H);
+  ctx.restore();
+  // vignette
+  const v = ctx.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, W * 0.72);
+  v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(0,2,8,${0.62 + (o.vig || 0)})`);
+  ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  if (o.dark) { ctx.fillStyle = `rgba(1,4,10,${o.dark})`; ctx.fillRect(0, 0, W, H); }
+  // grain (deterministic per frame) — also dithers the dark gradients against banding
+  const f = Math.round(t * FPS), g = GR[f % 4], ox = (f * 73) % 256, oy = (f * 151) % 256;
+  ctx.save(); ctx.globalCompositeOperation = 'overlay'; ctx.globalAlpha = 0.07;
+  ctx.translate(-ox, -oy); const pat = ctx.createPattern(g, 'repeat'); ctx.fillStyle = pat; ctx.fillRect(0, 0, W + 256, H + 256);
+  ctx.restore();
+}
+
+// ============================================================
+//  captions.js — kinetic subtitles: each word rises in on the frame it is spoken,
+//  key words in cyan, numbers set as figures. Token: TEXT@wordIndex, '*' = accent, '|' = new chunk, '_' = nbsp
+// ============================================================
+const CAPSPEC = {
+  hook:    'ПЕРВЫЕ@0 $10_000@1 ЗАРАБОТАТЬ@4 | *СЛОЖНЕЕ,@5 ЧЕМ@6 СЛЕДУЮЩИЕ@7 *$100_000@8',
+  line:    'БОЛЬШИНСТВО@0 ДУМАЕТ,@1 | ЧТО@2 ДЕНЬГИ@3 РАСТУТ@4 *ПО@5 *ПРЯМОЙ@6',
+  years:   'ЕСЛИ@0 ПЕРВЫЕ@1 $10_000@2 ЗАНЯЛИ@4 *ГОД@5 | СЛЕДУЮЩИЕ@6 $100_000@7 ЗАЙМУТ@8 *ДЕСЯТЬ@9 *ЛЕТ@10',
+  quit:    'ОНИ@0 СЧИТАЮТ@1 ЭТО…@2 | И@3 *СДАЮТСЯ,@4 ДАЖЕ@5 НЕ@6 НАЧАВ@7',
+  break:   'НО@0 РОСТ@1 РАБОТАЕТ@2 *НЕ@3 *ТАК@4',
+  start:   'ПРЕДСТАВЬ@0 ЧЕЛОВЕКА@1 НА@2 *СТАРТЕ@3 | НИ@4 *АУДИТОРИИ,@5 НИ@6 *ПРОДУКТА,@7 | НИ@8 *ДОКАЗАТЕЛЬСТВ,@9 ЧТО@10 ХОТЬ@11 ЧТО-ТО@12 РАБОТАЕТ@13',
+  posts:   'ОН@0 ПОСТИТ@1 НЕДЕЛЯМИ@2 — *ТИШИНА@3',
+  launch:  'ЗАПУСКАЕТ@0 ПЕРВЫЙ@1 *ПРОДУКТ@2 | И@3 ПОЛУЧАЕТ@4 *$40@5',
+  stairs:  'ОТСЮДА@0 $10_000@1 КАЖУТСЯ@3 *НЕВОЗМОЖНЫМИ@4 | А@5 $100_000@6 — ПРОСТО@8 *ШУТКОЙ@9',
+  blind:   'НО@0 ОН@1 ПОКА@2 НЕ@3 ВИДИТ@4 *ГЛАВНОГО@5',
+  top:     'ТОТ,@0 КТО@1 ДОШЁЛ@2 ДО@3 $10_000,@4 | ПОЛУЧИЛ@6 *НЕ@7 *ПРОСТО@8 *ДЕНЬГИ@9',
+  knows:   'ОН@0 ЗНАЕТ,@1 КАКОЙ@2 ПОСТ@3 *ВЫСТРЕЛИВАЕТ@4 | И@5 ЗА@6 ЧТО@7 ЛЮДИ@8 *РЕАЛЬНО@9 *ПЛАТЯТ@10',
+  system:  'У@0 НЕГО@1 ЕСТЬ@2 *ПРОДУКТ,@3 *ПЕРВЫЕ@4 *КЛИЕНТЫ@5 | И@6 *СИСТЕМА,@7 КОТОРАЯ@8 БОЛЬШЕ@9 | НЕ@10 ЗАВИСИТ@11 ОТ@12 *УДАЧИ@13',
+  battle:  'ПОЭТОМУ@0 ПУТЬ@1 К@2 $100_000@3 — | ЭТО@5 *НЕ@6 *НОВАЯ@7 *БИТВА@8',
+  repeat:  'ЭТО@0 *ПОВТОРИТЬ@1 ТО,@2 ЧТО@3 УЖЕ@4 РАБОТАЕТ@5 | ЕЩЁ@6 *ДЕВЯТЬ@7 *РАЗ@8',
+  notmoney:'ПЕРВЫЕ@0 $10_000@1 — | ЭТО@3 *НЕ@4 ПРО@5 *ДЕНЬГИ@6',
+  machine: 'ЭТО@0 ПРО@1 ТО,@2 ЧТОБЫ@3 *ПОСТРОИТЬ@4 *МАШИНУ@5',
+  easier:  'А@0 КОГДА@1 ОНА@2 ЕСТЬ@3 — | КАЖДЫЙ@4 СЛЕДУЮЩИЙ@5 ДОЛЛАР@6 | ДАЁТСЯ@7 *ЛЕГЧЕ@8 ПРЕДЫДУЩЕГО@9',
+};
+// build chunks with times
+const CAPS = [];
+for (const L of VOICE.lines) {
+  const spec = CAPSPEC[L.id]; if (!spec) continue;
+  let cur = null;
+  const toks = spec.split(/\s+/);
+  for (const tk of toks) {
+    if (tk === '|') { cur = null; continue; }
+    if (!cur) { cur = { id: L.id, words: [] }; CAPS.push(cur); }
+    const m = /^(\*?)(.*?)(?:@(\d+))?$/.exec(tk);
+    const idx = m[3] != null ? +m[3] : null;
+    const t = idx != null ? L.words[Math.min(idx, L.words.length - 1)].t0 : (cur.words.length ? cur.words[cur.words.length - 1].t : L.t0);
+    cur.words.push({ w: m[2].replace(/_/g, ' '), hl: !!m[1], t });
+  }
+}
+CAPS.forEach((c) => (c.t0 = c.words[0].t));
+CAPS.forEach((c, i) => {
+  const nxt = CAPS[i + 1], L = LN(c.id);
+  c.t1 = nxt ? Math.min(nxt.t0, (nxt.id === c.id ? nxt.t0 : L.t1 + 0.55)) : L.t1 + 0.6;
+  if (nxt && nxt.id !== c.id) c.t1 = Math.min(nxt.t0 - 0.02, Math.max(L.t1 + 0.25, nxt.t0 - 0.25));
+});
+let CAP_HIDE = () => false;   // scenes can veto captions (the final title)
+function captions(t) {
+  const c = CAPS.find((c) => t >= c.t0 - 0.08 && t < c.t1 + 0.14);
+  if (!c || CAP_HIDE(t)) return;
+  const S = 50, y = 112, gap = 24;
+  // layout
+  const ws = c.words.map((w) => ({ ...w, wd: TW(w.w, S, 800, SANS, 0.5) }));
+  let tot = ws.reduce((s, w) => s + w.wd, 0) + gap * (ws.length - 1);
+  const sc = Math.min(1, 1680 / tot);
+  let x = W / 2 - (tot * sc) / 2;
+  const out = clamp((t - c.t1) / 0.14);                 // chunk exit
+  ctx.save();
+  for (const w of ws) {
+    const k = clamp((t - (w.t - 0.06)) / 0.16), e = E.o(k);
+    if (k > 0) {
+      const yy = y + (1 - e) * 22 - out * 14, a = e * (1 - out);
+      const pop = w.hl ? 1 + 0.06 * Math.sin(Math.PI * clamp((t - w.t) / 0.3)) : 1;
+      const cx = x + (w.wd * sc) / 2;
+      ctx.save(); ctx.translate(cx, yy); ctx.scale(sc * pop, sc * pop);
+      // soft dark backing for legibility over bright scenes
+      T(w.w, 0, 0, { s: S, w: 800, c: w.hl ? C.cy : C.wh, a, ls: 0.5, g: w.hl ? 22 : 0 });
+      ctx.restore();
+    }
+    x += (w.wd + gap) * sc;
+  }
+  ctx.restore();
+}
+
+// ============================================================
+//  main.js — scene list, transitions, camera, sub-frame motion blur, renderFrame
+// ============================================================
+// scene: { id, t0, t1, draw(t), cam(t) -> {x,y,z,r,px,py,dim}, into: {type, d, dir, at} }
+const SC = [];
+const BLURW = [];   // extra [t0,t1] windows with sub-frame motion blur
+function scene(id, t0, t1, cam, draw, into) { SC.push({ id, t0, t1, cam, draw, into: into || { type: 'cut', d: 0 } }); }
+const CAM0 = { x: W / 2, y: H / 2, z: 1, r: 0 };
+// smooth keyframed camera: keys [[t, {x,y,z,r}], ...] eased between
+function camKeys(keys, ease = E.io) {
+  return (t) => {
+    if (t <= keys[0][0]) return { ...CAM0, ...keys[0][1] };
+    for (let i = 1; i < keys.length; i++) {
+      if (t <= keys[i][0]) {
+        const [ta, A] = keys[i - 1], [tb, B] = keys[i], u = (keys[i][2] || ease)((t - ta) / (tb - ta));
+        const a = { ...CAM0, ...A }, b = { ...CAM0, ...B };
+        return { x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), z: lerp(a.z, b.z, u), r: lerp(a.r, b.r, u), dim: lerp(a.dim || 0, b.dim || 0, u) };
+      }
+    }
+    return { ...CAM0, ...keys[keys.length - 1][1] };
+  };
+}
+let SHAKE = [];  // [t, amp, dur]
+function shake(t0, amp, dur) { SHAKE.push([t0, amp, dur]); }
+function shakeAt(t) {
+  let x = 0, y = 0, r = 0;
+  for (const [t0, a, d] of SHAKE) {
+    if (t < t0 || t > t0 + d) continue;
+    const k = a * Math.pow(1 - (t - t0) / d, 2);
+    x += k * nz1(t * 31, t0); y += k * nz1(t * 27, t0 + 4); r += k * 0.0012 * nz1(t * 19, t0 + 9);
+  }
+  return { x, y, r };
+}
+function applyCam(c, t) {
+  // a living, hand-held drift on top of every move
+  const sh = shakeAt(t);
+  const dx = Math.sin(t * 0.23) * 7 + Math.sin(t * 0.61) * 3, dy = Math.sin(t * 0.31 + 1) * 5;
+  const dr = Math.sin(t * 0.17) * 0.0045 + (c.r || 0);
+  ctx.translate(W / 2 + sh.x, H / 2 + sh.y); ctx.rotate(dr + sh.r); ctx.scale(c.z, c.z); ctx.translate(-c.x - dx, -c.y - dy);
+}
+function trWindow(i) { const s = SC[i], d = s.into.d || 0; return [s.t0 - d / 2, s.t0 + d / 2]; }
+function inBlur(t) {
+  for (let i = 1; i < SC.length; i++) { const s = SC[i]; if (['whip', 'zoom', 'zoomin'].includes(s.into.type)) { const [a, b] = trWindow(i); if (t > a && t < b) return true; } }
+  return BLURW.some(([a, b]) => t > a && t < b);
+}
+function drawScene(s, t, pre) {
+  ctx.save(); if (pre) pre(); const c = s.cam(t); applyCam(c, t); s.draw(t, c); ctx.restore();
+}
+function drawFrame(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none';
+  let i = SC.findIndex((s) => t >= s.t0 && t < s.t1); if (i < 0) i = t < SC[0].t0 ? 0 : SC.length - 1;
+  // which transition window are we in?
+  let tr = null;
+  for (let k = 1; k < SC.length; k++) { const [a, b] = trWindow(k); if (SC[k].into.d && t >= a && t < b) tr = { k, u: (t - a) / (b - a) }; }
+  const S = SC[i], c = S.cam(t);
+  BGP = { x: c.x * 0.6 + (c.px || 0), y: c.y * 0.6 + (c.py || 0), dim: c.dim || 0 };
+  background(t);
+  if (!tr) { drawScene(S, t); }
+  else {
+    const A = SC[tr.k - 1], B = SC[tr.k], o = B.into, u = tr.u, e = E.io(u);
+    if (o.type === 'fade') {
+      ctx.save(); ctx.globalAlpha = 1 - E.io2(u); drawScene(A, t); ctx.restore();
+      ctx.save(); ctx.globalAlpha = E.io2(u); drawScene(B, t); ctx.restore();
+    } else if (o.type === 'whip') {
+      const [dx, dy] = o.dir, ee = E.io(u);
+      ctx.save(); ctx.globalAlpha = 1 - clamp((u - 0.5) * 4); drawScene(A, t, () => ctx.translate(-dx * W * ee, -dy * H * ee)); ctx.restore();
+      ctx.save(); ctx.globalAlpha = clamp(u * 4 - 1); drawScene(B, t, () => ctx.translate(dx * W * (1 - ee), dy * H * (1 - ee))); ctx.restore();
+    } else if (o.type === 'zoom' || o.type === 'zoomin') {
+      const [px, py] = o.at || [W / 2, H / 2], [qx, qy] = o.to || [W / 2, H / 2];
+      const ea = E.i(clamp(u * 1.6)), eb = E.o5(clamp(u * 1.6 - 0.6));
+      ctx.save(); ctx.globalAlpha = 1 - clamp((u - 0.35) * 3.5);
+      drawScene(A, t, () => { const z = 1 + ea * (o.type === 'zoomin' ? 5 : 2.2); ctx.translate(px, py); ctx.scale(z, z); ctx.translate(-px, -py); });
+      ctx.restore();
+      ctx.save(); ctx.globalAlpha = clamp((u - 0.4) * 3);
+      drawScene(B, t, () => { const z = lerp(o.type === 'zoomin' ? 0.35 : 0.6, 1, eb); ctx.translate(qx, qy); ctx.scale(z, z); ctx.translate(-qx, -qy); });
+      ctx.restore();
+    } else { (t < B.t0 ? drawScene(A, t) : drawScene(B, t)); }
+  }
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  if (typeof HUD === 'function') HUD(t);
+  captions(t);
+}
+const ACC = document.createElement('canvas'); ACC.width = W; ACC.height = H; const actx = ACC.getContext('2d');
+let POSTO = () => ({});
+function renderFrame(t) {
+  const blur = window.__exporting && inBlur(t);
+  if (!blur) drawFrame(t);
+  else {
+    const N = 6, sh = 0.85 / FPS;
+    actx.clearRect(0, 0, W, H);
+    for (let i = 0; i < N; i++) {
+      drawFrame(t + (i / (N - 1) - 0.5) * sh);
+      actx.globalAlpha = 1 / (i + 1); actx.drawImage(cv, 0, 0);
+    }
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(ACC, 0, 0);
+  }
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  post(t, POSTO(t));
+}
+window.renderFrame = renderFrame;
+
+// ============================================================
+//  scenes_a.js — 1 the hill (hook) · 2 the straight-line graph · 3 the quitters · 4 the line breaks
+// ============================================================
+// ---- the hill: shared with the finale (scene 17)
+const smooth01 = (x) => { x = clamp(x); return x * x * (3 - 2 * x); };
+function hillY(x) {
+  if (x < 1150) return 780 - 450 * E.sine(clamp((x - 330) / 820));
+  const d = x - 1150; return 330 + 0.36 * d * smooth01(d / 380);
+}
+const HILL = []; for (let x = -900; x <= 5200; x += 16) HILL.push([x, hillY(x)]);
+const slopeAt = (x) => Math.atan2(hillY(x + 4) - hillY(x - 4), 8);
+function onHill(x, r) { const a = slopeAt(x); return [x + Math.sin(a) * r, hillY(x) - Math.cos(a) * r, a]; }
+
+// ---- scene 1: pushing a glowing ball up the hill; over the crest it rolls away by itself and snowballs
+const H1 = { climb0: 0.55, crest: WT('hook', 7) - 0.05, end: 5.3 };
+function ballX(t) {
+  if (t < H1.climb0) return 360;
+  if (t < H1.crest) {   // heavy, slipping push
+    const u = (t - H1.climb0) / (H1.crest - H1.climb0);
+    const slip = Math.sin(u * 26) * 9 * (1 - u) * Math.min(1, u * 6);
+    return 360 + (1150 - 360) * E.io2(u) * 0.985 + slip;
+  }
+  if (t < H1.crest + 0.22) return 1150 - 12 + 12 * E.io((t - H1.crest) / 0.22);  // teeter on the crest
+  const tau = t - H1.crest - 0.22; return 1150 + 700 * tau * tau + 60 * tau;
+}
+function ballR(t) { const tau = t - H1.crest - 0.22; return tau <= 0 ? 52 : 52 + 120 * E.o(clamp(tau / 1.9)); }
+function ballVal(t) {
+  const x = ballX(t); if (t < H1.crest + 0.22) return clamp((x - 360) / 790) * 10000;
+  const tau = t - H1.crest - 0.22; return 10000 + 100000 * Math.pow(clamp(tau / 1.55), 1.7);
+}
+function glowBall(x, y, r, rot, val, t) {
+  ctx.save(); ctx.translate(x, y);
+  glow('rgba(68,198,255,0.85)', r * 0.9);
+  const g = ctx.createRadialGradient(-r * 0.3, -r * 0.35, r * 0.05, 0, 0, r);
+  g.addColorStop(0, '#2a7fb8'); g.addColorStop(0.6, '#0c2c4c'); g.addColorStop(1, '#0a2440');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, r, 0, TAU); ctx.fill();
+  ctx.strokeStyle = '#8fe0ff'; ctx.lineWidth = Math.max(3, r * 0.07); ctx.stroke(); noGlow();
+  ctx.fillStyle = 'rgba(230,248,255,0.85)'; ctx.beginPath(); ctx.ellipse(-r * 0.38, -r * 0.42, r * 0.18, r * 0.09, -0.7, 0, TAU); ctx.fill();
+  T('$', 0, r * 0.03, { s: r * 0.95, w: 900, c: C.cy, g: r * 0.4 });
+  // rotating band so the roll reads
+  ctx.save(); ctx.rotate(rot); ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = Math.max(2, r * 0.05);
+  ctx.beginPath(); ctx.ellipse(0, 0, r * 0.92, r * 0.3, 0, 0, TAU); ctx.stroke(); ctx.restore();
+  ctx.restore();
+  if (val != null) T(money(val), x, y - r - 34 - r * 0.15, { s: 30 + r * 0.16, w: 800, f: MONO, c: C.wh, g: 14 });
+}
+scene('hill', 0, H1.end,
+  (t) => {
+    const bx = ballX(t), [cx, cy] = onHill(bx, ballR(t));
+    const climb = t < H1.crest + 0.3;
+    const z = climb ? lerp(1.28, 1.12, P(t, 0, H1.crest)) : lerp(1.12, 0.62, E.io(P(t, H1.crest + 0.2, 1.6)));
+    const lag = climb ? 0 : clamp((t - H1.crest - 0.2) / 0.6) * 160;
+    return { x: cx + 120 - lag, y: cy + 40 + (climb ? -30 : 60), z, r: climb ? -0.06 : 0.1 * E.io(P(t, H1.crest, 1.2)), px: 0 };
+  },
+  (t) => {
+    // ground with grass ticks
+    const vis = HILL.filter(([x]) => x > -500 && x < 4800);
+    line(vis, { c: 'rgba(214,232,255,0.9)', lw: 3.2, g: 10, gc: 'rgba(120,200,255,0.5)' });
+    ticks(vis, t, { n: 140, seed: 'hill' });
+    // under-ground soft fill
+    ctx.save(); ctx.beginPath(); vis.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.lineTo(4800, 3000); ctx.lineTo(-500, 3000); ctx.closePath();
+    const gf = ctx.createLinearGradient(0, 300, 0, 1400); gf.addColorStop(0, 'rgba(20,50,90,0.35)'); gf.addColorStop(1, 'rgba(4,10,20,0)'); ctx.fillStyle = gf; ctx.fill(); ctx.restore();
+    const bx = ballX(t), r = ballR(t), [cx, cy] = onHill(bx, r);
+    // hero: pushes until the crest, then stays on top and watches
+    const hxp = t < H1.crest ? bx - r - 62 : 1150 - 52 - 62 + 30 * E.io(P(t, H1.crest, 0.5));
+    const [hx, hy, ha] = onHill(hxp, 0);
+    const pushing = t < H1.crest;
+    hero(hx, hy, 118, { t, lean: pushing ? 0.42 + Math.sin(t * 9) * 0.04 : lerp(0.42, -0.05, E.o(P(t, H1.crest, 0.4))) + ha * 0.2, hop: pushing ? Math.abs(Math.sin(t * 9)) * 3 : 0 });
+    // effort drops
+    if (pushing && t > 0.8) {
+      const R = RNG('sweat');
+      for (let i = 0; i < 10; i++) {
+        const t0 = 0.8 + i * 0.27 + R() * 0.1, k = (t - t0) / 0.5; if (k < 0 || k > 1) continue;
+        ctx.save(); ctx.globalAlpha = (1 - k) * 0.8; ctx.fillStyle = C.cyL;
+        ctx.beginPath(); ctx.arc(hx - 10 - k * 40 * (0.5 + R()), hy - 120 - k * 30 + k * k * 60, 3.5, 0, TAU); ctx.fill(); ctx.restore();
+      }
+    }
+    // dust trail when rolling
+    if (!climb(t)) {
+      const R = RNG('trail');
+      for (let i = 0; i < 26; i++) {
+        const lagt = i * 0.045, tt = t - lagt; if (tt < H1.crest + 0.22) continue;
+        const px = ballX(tt), [qx, qy] = onHill(px, 4);
+        ctx.save(); ctx.globalAlpha = 0.5 * (1 - i / 26); ctx.fillStyle = '#7fd4ff';
+        ctx.beginPath(); ctx.arc(qx + (R() - 0.5) * 20, qy - R() * 30 - i * 2, 2 + R() * 5, 0, TAU); ctx.fill(); ctx.restore();
+      }
+    }
+    const rot = (bx - 360) / r;
+    glowBall(cx, cy, r, rot, ballVal(t), t);
+    // speed lines once it runs away
+    const sp = clamp((t - H1.crest - 0.6) / 0.6);
+    if (sp > 0) {
+      const R = RNG('speed'), a = slopeAt(bx);
+      for (let i = 0; i < 16; i++) {
+        const off = (R() - 0.5) * 520, len = 120 + R() * 260, ph = ((t * 3 + R()) % 1);
+        const sx = cx - Math.cos(a) * (200 + ph * 900) + Math.sin(a) * off, sy = cy - Math.sin(a) * (200 + ph * 900) - Math.cos(a) * off;
+        line([[sx, sy], [sx - Math.cos(a) * len, sy - Math.sin(a) * len]], { c: 'rgba(160,225,255,0.5)', lw: 2, a: sp * (1 - ph) });
+      }
+    }
+    function climb(tt) { return tt < H1.crest + 0.22; }
+  });
+BLURW.push([H1.crest + 0.4, H1.end]);
+sfx('roll', H1.crest + 0.15, -4);
+sfx('whoosh', H1.crest + 0.55, -6);
+
+// ---- scenes 2-4: one graph world. Axes, the "straight line" belief, the quitters, the break.
+const G = { ox: 380, oy: 880, x1: 1640, y1: 280 };
+const gx = (yr) => G.ox + yr * 126, gy = (v) => G.oy - (v / 100000) * 600;
+const TG = { start: H1.end, crowd: WT('line', 0), lineOn: WT('line', 3), lineTag: WT('line', 6), y1: WT('years', 5), y10a: WT('years', 6), y10: WT('years', 10),
+  quit0: LN('quit').t0 - 0.35, calc: WT('quit', 1), give: WT('quit', 4), notstart: WT('quit', 7), brk: LN('break').t0 - 0.25, crack: WT('break', 3), shatter: WT('break', 4) - 0.02, end: LN('start').t0 - 0.25 };
+const CROWD = [[120, 0.96], [178, 1.04], [236, 0.92], [292, 1.0], [150, 0.9], [262, 0.95]].map(([x, s], i) => ({ x, s, i }));
+// the dot's progress along the straight line, in years
+function dotYears(t) {
+  if (t < TG.y1 - 1.1) return 0;
+  if (t < TG.y1 + 0.1) return E.io(P(t, TG.y1 - 1.1, 1.2)) * 1;
+  if (t < TG.y10a) return 1;
+  return 1 + 9 * E.io2(P(t, TG.y10a, TG.y10 - TG.y10a + 0.05));
+}
+const FRAGS = (() => { const R = RNG('frags'), n = 22, out = []; for (let i = 0; i < n; i++) { const f0 = i / n, f1 = (i + 1) / n; out.push({ f0, f1, vx: (R() - 0.5) * 900, vy: -300 - R() * 700, vr: (R() - 0.5) * 9 }); } return out; })();
+scene('graph', TG.start, TG.end,
+  camKeys([[TG.start, { x: 980, y: 560, z: 0.92 }], [TG.lineTag, { x: 960, y: 560, z: 1.0 }], [TG.y1 - 1.0, { x: 940, y: 600, z: 1.02 }],
+    [TG.y1 + 0.2, { x: 700, y: 690, z: 1.32 }], [TG.y10a, { x: 760, y: 660, z: 1.3 }], [TG.y10 + 0.1, { x: 1320, y: 420, z: 1.18 }],
+    [TG.quit0 + 0.2, { x: 1000, y: 580, z: 0.98 }], [TG.calc + 0.3, { x: 480, y: 700, z: 1.38 }], [TG.notstart + 0.3, { x: 470, y: 720, z: 1.45 }],
+    [TG.brk + 0.4, { x: 1000, y: 580, z: 0.95 }], [TG.shatter, { x: 1000, y: 570, z: 1.02 }], [TG.end, { x: 1000, y: 470, z: 0.95 }]]),
+  (t) => {
+    const a = E.o(P(t, TG.start, 0.7));
+    // axes
+    line(sub([[G.ox, G.y1 - 30], [G.ox, G.oy], [G.x1 + 60, G.oy]], a), { c: 'rgba(200,220,245,0.8)', lw: 2.6 });
+    T('$', G.ox - 4, G.y1 - 58, { s: 26, w: 700, c: C.mu, a });
+    for (let i = 1; i <= 10; i++) { const p = clamp(a * 12 - i * 0.6); T(String(i), gx(i), G.oy + 30, { s: 20, w: 600, f: MONO, c: C.mu, a: p }); line([[gx(i), G.oy - 6], [gx(i), G.oy + 6]], { c: 'rgba(200,220,245,0.6)', lw: 2, a: p }); }
+    T('ГОДЫ', G.x1 + 20, G.oy + 62, { s: 18, w: 800, c: C.mu, ls: 2, a });
+    // the believed straight line (dashed), unless shattered
+    const brk = t >= TG.shatter;
+    const lineP = E.io(P(t, TG.lineOn - 0.2, 0.9));
+    const crack = clamp((t - TG.crack) / 0.2);
+    if (!brk && lineP > 0) {
+      const pts = sub([[G.ox, G.oy], [G.x1, G.y1]], lineP);
+      if (crack > 0) {   // a jagged crack runs along it, it trembles
+        const R = RNG('crk' + Math.floor(t * 30));
+        ctx.save(); ctx.translate((R() - 0.5) * 6 * crack, (R() - 0.5) * 6 * crack);
+        line(pts, { c: '#ffffff', lw: 4 + crack * 2, g: 30 * crack });
+        ctx.restore();
+      } else line(pts, { c: 'rgba(225,238,255,0.85)', lw: 3, dash: [16, 12], off: -t * 30 });
+      pill('ПО ПРЯМОЙ', 1050, 470, t, TG.lineTag, { a: 1 - crack });
+    }
+    if (brk) {   // shards fly and fall
+      const tau = t - TG.shatter;
+      for (const f of FRAGS) {
+        const p0 = ptAt([[G.ox, G.oy], [G.x1, G.y1]], f.f0), p1 = ptAt([[G.ox, G.oy], [G.x1, G.y1]], f.f1);
+        const mx = (p0[0] + p1[0]) / 2 + f.vx * tau, my = (p0[1] + p1[1]) / 2 + f.vy * tau + 1500 * tau * tau, rot = f.vr * tau;
+        const hl = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) / 2 * 0.8, ang = Math.atan2(p1[1] - p0[1], p1[0] - p0[0]) + rot;
+        line([[mx - Math.cos(ang) * hl, my - Math.sin(ang) * hl], [mx + Math.cos(ang) * hl, my + Math.sin(ang) * hl]], { c: C.cyL, lw: 4, g: 16, a: 1 - clamp(tau / 1.2) * 0.3 });
+      }
+    }
+    // the progress dot + solid trail
+    const yrs = dotYears(t);
+    if (t > TG.y1 - 1.2 && !brk) {
+      const da = 1 - crack;
+      const p = [gx(yrs), gy(yrs * 10000)];
+      line([[G.ox, G.oy], p], { c: C.cy, lw: 5, g: 22, a: da });
+      ctx.save(); glow(C.cyGlow, 30); ctx.fillStyle = '#dff6ff'; ctx.globalAlpha = da; ctx.beginPath(); ctx.arc(p[0], p[1], 11, 0, TAU); ctx.fill(); ctx.restore();
+      if (yrs >= 0.98) T('$10 000', gx(1) + 18, gy(10000) - 34, { s: 30, w: 800, f: MONO, al: 'left', a: E.o(P(t, TG.y1 - 0.1, 0.3)) * da });
+      if (t > TG.y10 - 0.1) T('$100 000', gx(10) - 8, gy(100000) - 44, { s: 40, w: 800, f: MONO, al: 'right', c: C.cy, g: 20, a: E.o(P(t, TG.y10 - 0.1, 0.3)) * da, sc: 1 + 0.15 * Math.sin(Math.PI * P(t, TG.y10 - 0.1, 0.35)) });
+      // calendar card
+      const ca = E.o(P(t, TG.y1 - 1.3, 0.4)) * (1 - E.io(P(t, TG.quit0, 0.5))) * da;
+      if (ca > 0) {
+        const cx = 610, cy = 360;
+        let big, lab;
+        if (t < TG.y1) { big = Math.max(1, Math.round(12 * E.io(P(t, TG.y1 - 1.1, 1.1)))); lab = 'МЕСЯЦЕВ'; if (big === 12) { big = 1; lab = 'ГОД'; } }
+        else if (t < TG.y10a) { big = 1; lab = 'ГОД'; }
+        else { big = Math.max(1, Math.round(yrs)); lab = big === 1 ? 'ГОД' : big < 5 ? 'ГОДА' : 'ЛЕТ'; }
+        const flip = (t * 60) % 1;
+        ctx.save(); ctx.globalAlpha = ca;
+        card(cx - 70, cy - 70, 140, 150, { r: 18, glowc: big === 10 ? C.cyGlow : null });
+        ctx.fillStyle = 'rgba(220,235,255,0.9)'; rr(cx - 70, cy - 70, 140, 34, 14); ctx.fill(); ctx.fillRect(cx - 70, cy - 50, 140, 14);
+        T(lab, cx, cy - 53, { s: 16, w: 900, c: '#0a1424', ls: 1.5 });
+        T(String(big), cx, cy + 22, { s: 64, w: 900, f: SANS, c: big === 10 ? C.cy : C.wh, g: big === 10 ? 18 : 0 });
+        ctx.restore();
+      }
+    }
+    // the crowd ("most people") at the origin; they turn away and walk off when they give up
+    for (const m of CROWD) {
+      const pop = SPR(t, TG.crowd + m.i * 0.07, 2.4, 0.5); if (pop <= 0) continue;
+      const leave = clamp((t - TG.give - m.i * 0.16) / 0.9);
+      const x = m.x - E.i2(leave) * 260, a = 1 - leave;
+      grey(x, G.oy, 84 * m.s * pop, { t, ph: m.i, flip: leave > 0.02, a, lean: -0.08 * Math.sin(leave * 20) * (1 - leave) });
+    }
+    T('БОЛЬШИНСТВО', 206, G.oy + 34, { s: 16, w: 800, c: C.mu, ls: 2.5, a: E.o(P(t, TG.crowd + 0.3, 0.4)) * (1 - P(t, TG.give, 0.6)) });
+    // start flag (never used)
+    if (t > TG.calc - 0.3) {
+      const fa = E.o(P(t, TG.calc - 0.3, 0.4)) * (1 - P(t, TG.brk + 0.4, 0.5));
+      ctx.save(); ctx.globalAlpha = fa;
+      line([[G.ox + 60, G.oy], [G.ox + 60, G.oy - 110]], { c: C.wh, lw: 3 });
+      const wv = Math.sin(t * 5) * 6;
+      ctx.fillStyle = C.wh; ctx.beginPath(); ctx.moveTo(G.ox + 61, G.oy - 110); ctx.quadraticCurveTo(G.ox + 95, G.oy - 104 + wv, G.ox + 125, G.oy - 92); ctx.lineTo(G.ox + 61, G.oy - 74); ctx.fill();
+      T('СТАРТ', G.ox + 60, G.oy + 64, { s: 16, w: 800, c: C.mu, ls: 2 });
+      ctx.restore();
+    }
+    // calculator: 100 000 ÷ 10 000 = 10 ЛЕТ
+    const kc = E.o(P(t, TG.calc - 0.35, 0.4)) * (1 - E.io(P(t, TG.brk, 0.5)));
+    if (kc > 0) {
+      const x = 640, y = 560 + (1 - kc) * 40;
+      ctx.save(); ctx.globalAlpha = kc;
+      card(x - 120, y - 150, 240, 300, { r: 24 });
+      ctx.fillStyle = 'rgba(30,70,110,0.6)'; rr(x - 96, y - 126, 192, 70, 10); ctx.fill();
+      const txt = '100K ÷ 10K', ty = Math.floor(clamp((t - TG.calc) / 0.4) * txt.length);
+      const res = t > WT('quit', 2);
+      T(res ? '10 ЛЕТ' : txt.slice(0, ty), x, y - 91, { s: res ? 34 : 24, w: 800, f: MONO, c: res ? C.cy : C.wh, g: res ? 16 : 0 });
+      for (let r = 0; r < 4; r++) for (let c = 0; c < 4; c++) { ctx.strokeStyle = 'rgba(200,220,245,0.55)'; ctx.lineWidth = 2; rr(x - 92 + c * 48, y - 34 + r * 44, 40, 34, 7); ctx.stroke(); }
+      ctx.restore();
+    }
+    pill('СДАЮТСЯ, НЕ НАЧАВ', 330, 700, t, TG.notstart - 0.2, { a: 1 - P(t, TG.brk, 0.4) });
+  },
+  { type: 'zoom', d: 0.55, at: [1500, 700] });
+sfx('pop', TG.crowd, -12); sfx('whoosh', TG.lineOn - 0.15, -14); sfx('pop', TG.lineTag, -8);
+for (let i = 0; i < 12; i++) sfx('tick', TG.y1 - 1.1 + i * 0.09, -16);
+for (let i = 0; i < 9; i++) sfx('tick', TG.y10a + (TG.y10 - TG.y10a) * E.io2((i + 1) / 9) * 0.98, -14);
+sfx('ding', TG.y10 - 0.05, -10);
+for (let i = 0; i < 6; i++) sfx('tick', TG.calc + i * 0.07, -18);
+sfx('pop', TG.notstart - 0.2, -10);
+sfx('rise', TG.crack - 0.9, -10); sfx('shatter', TG.shatter, -2); shake(TG.shatter, 22, 0.6);
+BLURW.push([TG.shatter, TG.shatter + 0.5]);
+
+// ============================================================
+//  scenes_b.js — 5 the start (three walls) · 6 posting into silence · 7 launch: $40 · 8 the staircase · 9 what he can't see
+// ============================================================
+const GY = 740;   // ground line in ground scenes
+function ground(t, x0 = -400, x1 = 2400, a = 1) {
+  line([[x0, GY], [x1, GY]], { c: 'rgba(214,232,255,0.85)', lw: 3, a, g: 8, gc: 'rgba(120,200,255,0.45)' });
+  ticks([[x0, GY], [x1, GY]], t, { n: 70, seed: 'gr' + x0 });
+}
+// ---- 5: the start
+const T5 = { t0: TG.end, hero: WT('start', 1), flag: WT('start', 3), c1: WT('start', 5), c2: WT('start', 7), c3: WT('start', 9), none: WT('start', 13) - 0.15, end: LN('posts').t0 - 0.2 };
+const WALLS = [
+  { x: 760, t: T5.c1, lab: 'НЕТ АУДИТОРИИ', icon: 'seats' }, { x: 1010, t: T5.c2, lab: 'НЕТ ПРОДУКТА', icon: 'box' }, { x: 1260, t: T5.c3, lab: 'НЕТ ДОКАЗАТЕЛЬСТВ', icon: 'flat' }];
+function wallCard(w, t, k) {
+  // falls from above, lands with squash
+  const fall = clamp((t - w.t + 0.32) / 0.32), land = t - w.t;
+  const y = lerp(-500, GY - 210, E.i2(fall));
+  const sq = land > 0 ? Math.exp(-land * 9) * Math.sin(land * 30) * 0.08 : 0;
+  ctx.save(); ctx.translate(w.x, GY); ctx.scale(1 + sq, 1 - sq); ctx.translate(-w.x, -GY);
+  const x = w.x - 115, yy = y;
+  card(x, yy, 230, 200, { r: 18, glowc: land > 0 && land < 0.3 ? 'rgba(200,230,255,0.6)' : null });
+  T(w.lab, w.x, yy + 30, { s: 15, w: 900, c: C.wh, ls: 1.5 });
+  ctx.save(); ctx.translate(w.x, yy + 115); ctx.strokeStyle = 'rgba(200,220,245,0.85)'; ctx.lineWidth = 2.4;
+  if (w.icon === 'seats') { for (let r = 0; r < 2; r++) for (let c = 0; c < 5; c++) { rr(-80 + c * 33, -26 + r * 30, 26, 22, 5); ctx.stroke(); } }
+  if (w.icon === 'box') { ctx.beginPath(); ctx.moveTo(-46, -24); ctx.lineTo(46, -24); ctx.lineTo(46, 44); ctx.lineTo(-46, 44); ctx.closePath(); ctx.stroke(); ctx.beginPath(); ctx.moveTo(-46, -24); ctx.lineTo(-60, -44); ctx.moveTo(46, -24); ctx.lineTo(60, -44); ctx.stroke(); T('?', 0, 12, { s: 40, w: 800, c: C.cy, g: 12 }); }
+  if (w.icon === 'flat') { ctx.beginPath(); for (let i = 0; i <= 40; i++) { const xx = -85 + i * 4.25, yv = 36 + Math.sin(i * 2.3 + t * 3) * 3 + Math.sin(i * 0.7) * 2; i ? ctx.lineTo(xx, yv) : ctx.moveTo(xx, yv); } ctx.stroke(); ctx.beginPath(); ctx.moveTo(-85, -40); ctx.lineTo(-85, 46); ctx.lineTo(88, 46); ctx.stroke(); }
+  ctx.restore();
+  xmark(x + 230, yy, 18, SPR(t, w.t + 0.18, 2.6, 0.45));
+  ctx.restore();
+  // dust puff on landing
+  if (land > 0 && land < 0.6) {
+    const R = RNG('puff' + w.x);
+    for (let i = 0; i < 14; i++) { const dir = i < 7 ? -1 : 1, s = R(); ctx.save(); ctx.globalAlpha = 0.5 * (1 - land / 0.6); ctx.fillStyle = '#9fd2ff'; ctx.beginPath(); ctx.arc(w.x + dir * (110 + land * 200 * s), GY - 6 - land * 40 * R(), 3 + 6 * R(), 0, TAU); ctx.fill(); ctx.restore(); }
+  }
+}
+scene('start', T5.t0, T5.end,
+  camKeys([[T5.t0, { x: 960, y: 560, z: 1.08 }], [T5.c1 - 0.2, { x: 950, y: 580, z: 1.14 }], [T5.c3 + 0.4, { x: 1000, y: 580, z: 1.18 }], [T5.end, { x: 900, y: 610, z: 1.26 }]]),
+  (t) => {
+    floorGrid(t, GY, 0, 0.7);
+    // shards fall into place as the new ground
+    const tau = t - T5.t0, gl = E.o(P(t, T5.t0 + 0.05, 0.55));
+    if (tau < 0.6) {
+      const R = RNG('fallshards');
+      for (let i = 0; i < 18; i++) { const x = 100 + i * 100 + (R() - 0.5) * 40, k = clamp((tau - R() * 0.25) / 0.35), y = lerp(-80 - R() * 300, GY, E.i2(k)), ang = (1 - k) * (R() - 0.5) * 4; line([[x - 40 * Math.cos(ang), y - 40 * Math.sin(ang)], [x + 40 * Math.cos(ang), y + 40 * Math.sin(ang)]], { c: C.cyL, lw: 4, g: 14, a: 1 - k * 0.6 }); }
+    }
+    ground(t, 960 - 1400 * gl, 960 + 1400 * gl);
+    // hero at the start
+    const hp = SPR(t, T5.hero - 0.15, 2.2, 0.45);
+    if (hp > 0) hero(380, GY, 130 * hp, { t, headX: Math.sin(t * 0.8) * 3 });
+    // the flag at $10 000, far away, with a dotted path
+    const fp = SPR(t, T5.flag - 0.1, 2.0, 0.5);
+    if (fp > 0) {
+      line([[460, GY - 20], [1580, GY - 20]], { c: 'rgba(160,200,240,0.5)', lw: 2.5, dash: [3, 12], a: clamp(fp) });
+      ctx.save(); ctx.translate(1640, GY); ctx.scale(fp, fp);
+      line([[0, 0], [0, -170]], { c: C.wh, lw: 3 });
+      const wv = Math.sin(t * 4) * 7; ctx.fillStyle = C.wh; glow('rgba(200,235,255,0.6)', 20);
+      ctx.beginPath(); ctx.moveTo(2, -170); ctx.quadraticCurveTo(40, -162 + wv, 84, -150); ctx.lineTo(2, -118); ctx.fill(); noGlow();
+      T('$10 000', 40, -205, { s: 34, w: 800, f: MONO, c: C.cy, g: 16 });
+      ctx.restore();
+    }
+    for (const w of WALLS) if (t > w.t - 0.34) wallCard(w, t);
+    pill('НИЧЕГО ПОКА НЕ РАБОТАЕТ', 1010, 520, t, T5.none);
+  },
+  { type: 'whip', d: 0.5, dir: [0, 1] });
+sfx('whoosh_big', T5.t0 - 0.3, -10); sfx('pop', T5.hero - 0.1, -10); sfx('pop', T5.flag, -10);
+for (const w of WALLS) { sfx('thud', w.t, -1); sfx('tick', w.t + 0.18, -12); shake(w.t, 7, 0.3); }
+sfx('pop', T5.none, -8);
+
+// ---- 6: posting for weeks into silence
+const T6 = { t0: T5.end, wk: WT('posts', 2), quiet: WT('posts', 3), end: LN('launch').t0 - 0.2 };
+function phone(x, y, w, h, t, scroll, o = {}) {
+  card(x - w / 2, y - h / 2, w, h, { r: 36, lw: 3, fill: 'rgba(6,16,32,0.95)' });
+  ctx.save(); rr(x - w / 2 + 12, y - h / 2 + 40, w - 24, h - 64, 18); ctx.clip();
+  for (let i = -1; i < 8; i++) {
+    const py = y - h / 2 + 52 + i * 118 - (scroll % 118);
+    card(x - w / 2 + 24, py, w - 48, 100, { r: 12, lw: 2, sc: 'rgba(190,210,240,0.5)', fill: 'rgba(16,34,60,0.9)' });
+    ctx.fillStyle = 'rgba(190,210,240,0.35)'; rr(x - w / 2 + 40, py + 16, 60, 60, 10); ctx.fill();
+    rr(x - w / 2 + 114, py + 22, w - 180, 12, 6); ctx.fill(); rr(x - w / 2 + 114, py + 44, (w - 180) * 0.6, 12, 6); ctx.fill();
+    T('♡ 0', x - w / 2 + 130, py + 78, { s: 14, w: 700, f: MONO, c: C.mu, al: 'left' });
+  }
+  ctx.restore();
+  ctx.fillStyle = 'rgba(200,220,245,0.6)'; rr(x - 40, y - h / 2 + 16, 80, 8, 4); ctx.fill();
+}
+function plane(x, y, s, ang, a) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(ang); ctx.globalAlpha *= a; ctx.strokeStyle = C.wh; ctx.lineWidth = 2.5; ctx.lineJoin = 'round';
+  ctx.beginPath(); ctx.moveTo(s, 0); ctx.lineTo(-s, -s * 0.6); ctx.lineTo(-s * 0.5, 0); ctx.lineTo(-s, s * 0.6); ctx.closePath(); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-s * 0.5, 0); ctx.lineTo(s, 0); ctx.stroke(); ctx.restore();
+}
+scene('posts', T6.t0, T6.end,
+  camKeys([[T6.t0, { x: 960, y: 560, z: 1.0 }], [T6.quiet, { x: 980, y: 560, z: 1.08 }], [T6.end, { x: 1000, y: 565, z: 1.14 }]]),
+  (t) => {
+    const run = t < T6.quiet ? 1 : Math.exp(-(t - T6.quiet) * 6);
+    const scrollT = Math.min(t, T6.quiet) - T6.t0 + (t > T6.quiet ? (1 - Math.exp(-(t - T6.quiet) * 6)) / 6 : 0);
+    phone(720, 590, 330, 600, t, scrollT * 260);
+    const wk = Math.min(7, 1 + Math.floor(6 * E.io(P(t, T6.t0 + 0.15, T6.quiet - T6.t0 - 0.2))));
+    T('НЕДЕЛЯ ' + wk, 720, 252, { s: 30, w: 900, c: C.cy, g: 14, ls: 2 });
+    // paper planes leave the phone and drop
+    for (let i = 0; i < 9; i++) {
+      const t0 = T6.t0 + 0.1 + i * 0.16; if (t0 > T6.quiet) break;
+      const k = (t - t0) / 1.4; if (k < 0 || k > 1) continue;
+      const x = 900 + k * 620, y = 520 - Math.sin(k * Math.PI * 0.6) * 130 + k * k * 380;
+      plane(x, y, 20, -0.4 + k * 1.4, (1 - k) * (0.4 + 0.6 * run));
+    }
+    // flat stats
+    const sa = E.o(P(t, T6.t0 + 0.2, 0.4));
+    card(1260, 430, 340, 230, { r: 18, a: sa });
+    T('ПРОСМОТРЫ', 1290, 485, { s: 16, w: 800, c: C.mu, al: 'left', ls: 2, a: sa });
+    T(String(Math.round(3 + 2 * Math.sin(t * 2))), 1570, 485, { s: 26, w: 800, f: MONO, al: 'right', a: sa });
+    T('ЛАЙКИ', 1290, 545, { s: 16, w: 800, c: C.mu, al: 'left', ls: 2, a: sa }); T('0', 1570, 545, { s: 26, w: 800, f: MONO, al: 'right', a: sa });
+    T('ПРОДАЖИ', 1290, 605, { s: 16, w: 800, c: C.mu, al: 'left', ls: 2, a: sa }); T('0', 1570, 605, { s: 26, w: 800, f: MONO, al: 'right', a: sa });
+    pill('ТИШИНА', 1430, 720, t, T6.quiet, { dark: 'rgba(200,220,245,0.7)' });
+  },
+  { type: 'zoomin', d: 0.5, at: [380, 700], to: [720, 590] });
+sfx('whoosh', T6.t0 - 0.2, -10);
+for (let i = 0; i < 6; i++) sfx('paper', T6.t0 + 0.1 + i * 0.32, -16);
+for (let i = 0; i < 6; i++) sfx('tick', T6.t0 + 0.15 + (T6.quiet - T6.t0 - 0.2) * (i + 1) / 6, -15);
+
+// ---- 7: launch -> $40
+const T7 = { t0: T6.end, press: WT('launch', 0) + 0.05, prod: WT('launch', 2), coin: WT('launch', 5) - 0.32, end: LN('stairs').t0 - 0.22 };
+scene('launch', T7.t0, T7.end,
+  camKeys([[T7.t0, { x: 860, y: 560, z: 1.06 }], [T7.prod, { x: 900, y: 560, z: 1.06 }], [T7.coin - 0.1, { x: 1160, y: 540, z: 1.2 }], [T7.end, { x: 1180, y: 520, z: 1.28 }]]),
+  (t) => {
+    // the button
+    const pr = t > T7.press ? Math.exp(-(t - T7.press) * 10) * Math.sin((t - T7.press) * 40) : 0;
+    const bs = 1 - Math.max(0, pr) * 0.08 - (t > T7.press && t < T7.press + 0.08 ? 0.06 : 0);
+    ctx.save(); ctx.translate(640, 600); ctx.scale(bs, bs);
+    glow('rgba(68,198,255,0.9)', 40 + (t > T7.press ? 30 * Math.exp(-(t - T7.press) * 3) : 0));
+    ctx.fillStyle = C.cy; rr(-150, -50, 300, 100, 50); ctx.fill(); noGlow();
+    T('ЗАПУСК', 0, 2, { s: 38, w: 900, c: '#041a2e', ls: 3 });
+    ctx.restore();
+    if (t > T7.press) for (let k = 0; k < 2; k++) { const u = (t - T7.press - k * 0.15) / 0.9; if (u > 0 && u < 1) { ctx.save(); ctx.globalAlpha = 1 - u; ctx.strokeStyle = C.cy; ctx.lineWidth = 3; rr(640 - 150 - u * 120, 550 - u * 80, 300 + u * 240, 100 + u * 160, 50 + u * 80); ctx.stroke(); ctx.restore(); } }
+    // the jar
+    const jx = 1280, jy = 560, ja = E.o(P(t, T7.t0 + 0.1, 0.5));
+    ctx.save(); ctx.globalAlpha = ja;
+    ctx.strokeStyle = 'rgba(210,230,255,0.85)'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(jx - 150, jy - 190); ctx.lineTo(jx - 130, jy + 190); ctx.quadraticCurveTo(jx - 128, jy + 210, jx - 108, jy + 210); ctx.lineTo(jx + 108, jy + 210); ctx.quadraticCurveTo(jx + 128, jy + 210, jx + 130, jy + 190); ctx.lineTo(jx + 150, jy - 190); ctx.stroke();
+    ctx.globalAlpha = ja * 0.12; ctx.fillStyle = '#9fd8ff'; ctx.fillRect(jx - 125, jy - 170, 20, 340);
+    ctx.globalAlpha = ja;
+    T('ЦЕЛЬ: $10 000', jx, jy + 262, { s: 20, w: 800, c: C.mu, ls: 2 });
+    // progress bar: 0.4%
+    const pb = t > T7.coin + 0.4 ? E.o(P(t, T7.coin + 0.4, 0.5)) : 0;
+    ctx.strokeStyle = 'rgba(200,220,245,0.6)'; ctx.lineWidth = 2; rr(jx - 160, jy + 300, 320, 16, 8); ctx.stroke();
+    ctx.fillStyle = C.cy; glow(C.cyGlow, 12); rr(jx - 160, jy + 300, Math.max(0.01, 320 * 0.004 * pb) + 4 * pb, 16, 8); ctx.fill(); noGlow();
+    T('0,4%', jx + 190, jy + 308, { s: 20, w: 800, f: MONO, c: C.cy, al: 'left', a: pb });
+    ctx.restore();
+    // the single coin
+    if (t > T7.coin - 0.05) {
+      const k = clamp((t - T7.coin) / 0.38), y = lerp(jy - 420, jy + 186, E.i2(k));
+      const bounce = t > T7.coin + 0.38 ? Math.abs(Math.sin((t - T7.coin - 0.38) * 14)) * 22 * Math.exp(-(t - T7.coin - 0.38) * 6) : 0;
+      coin(jx, y - bounce, 22, { sx: t > T7.coin + 0.5 ? 1 : Math.cos(t * 14) * 0.9 + 0.1 });
+      if (t > T7.coin + 0.3) T('$40', jx + 6, jy - 260, { s: 80, w: 900, f: SANS, c: C.cy, g: 22, a: E.o(P(t, T7.coin + 0.3, 0.2)), sc: 0.6 + 0.4 * SPR(t, T7.coin + 0.3, 2.4, 0.45) });
+    }
+    // the launched "product" flies from the button to the jar's edge and fizzles
+    if (t > T7.prod - 0.3 && t < T7.coin + 0.3) {
+      const k = clamp((t - T7.prod + 0.3) / 0.8), x = lerp(640, 1180, E.io(k)), y = 520 - Math.sin(k * Math.PI) * 160;
+      cube(x, y, 22 * (1 - 0.3 * k), t * 2, { a: 1 - clamp((t - T7.coin) / 0.3) });
+    }
+  },
+  { type: 'whip', d: 0.45, dir: [1, 0] });
+sfx('whoosh', T7.t0 - 0.2, -10); sfx('button', T7.press, -2); sfx('whoosh', T7.prod - 0.2, -14); sfx('coin', T7.coin + 0.36, 0); sfx('pop', T7.coin + 0.3, -10);
+
+// ---- 8: the staircase; $10 000 "impossible", $100 000 "a joke"
+const T8 = { t0: T7.end, imp: WT('stairs', 4), joke0: WT('stairs', 5), joke: WT('stairs', 9), end: LN('blind').t0 - 0.2 };
+const ST = { x0: 360, y0: 920, n: 9, sw: 138, sh: 82 };   // staircase rising right
+function stairs(t, a = 1, mirror = false) {
+  ctx.save(); ctx.globalAlpha *= a;
+  const pts = [[ST.x0 - 400, ST.y0]];
+  for (let i = 0; i < ST.n; i++) { const x = ST.x0 + i * ST.sw, y = ST.y0 - i * ST.sh; pts.push([x, y], [x, y - ST.sh]); }
+  pts.push([ST.x0 + ST.n * ST.sw + 260, ST.y0 - ST.n * ST.sh]);
+  ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.lineTo(ST.x0 + ST.n * ST.sw + 260, ST.y0 + 400); ctx.lineTo(ST.x0 - 400, ST.y0 + 400); ctx.closePath();
+  const g = ctx.createLinearGradient(0, ST.y0 - 800, 0, ST.y0 + 200); g.addColorStop(0, 'rgba(40,110,170,0.55)'); g.addColorStop(1, 'rgba(8,24,48,0.35)');
+  ctx.fillStyle = g; ctx.fill();
+  line(pts, { c: 'rgba(200,230,255,0.9)', lw: 3, g: 10, gc: 'rgba(120,200,255,0.5)' });
+  ctx.restore();
+}
+const topX = ST.x0 + ST.n * ST.sw + 100, topY = ST.y0 - ST.n * ST.sh;
+scene('stairs', T8.t0, T8.end,
+  camKeys([[T8.t0, { x: 700, y: 780, z: 1.2 }], [T8.imp - 0.3, { x: 1250, y: 250, z: 1.0 }], [T8.joke0, { x: 1300, y: 120, z: 0.92 }], [T8.joke + 0.2, { x: 1350, y: -80, z: 0.9 }], [T8.end, { x: 1360, y: -95, z: 0.92 }]], E.io2),
+  (t) => {
+    stairs(t);
+    hero(ST.x0 - 150, ST.y0, 70, { t, lean: -0.12 });
+    // the $10 000 flag on top + "impossible"
+    line([[topX, topY], [topX, topY - 150]], { c: C.wh, lw: 3 });
+    ctx.fillStyle = C.wh; ctx.beginPath(); ctx.moveTo(topX + 2, topY - 150); ctx.lineTo(topX + 80, topY - 132); ctx.lineTo(topX + 2, topY - 108); ctx.fill();
+    T('$10 000', topX + 20, topY - 190, { s: 40, w: 800, f: MONO, c: C.cy, g: 16 });
+    pill('НЕВОЗМОЖНО', topX + 20, topY - 250, t, T8.imp);
+    // fog at the top of the stairs
+    const fog = ctx.createRadialGradient(topX, topY - 40, 20, topX, topY - 40, 520); fog.addColorStop(0, 'rgba(120,190,240,0.16)'); fog.addColorStop(1, 'rgba(120,190,240,0)');
+    ctx.fillStyle = fog; ctx.beginPath(); ctx.arc(topX, topY - 40, 520, 0, TAU); ctx.fill();
+    // the cloud with $100 000 and laughter
+    const cx = 1150, cy = -230, ca = E.o(P(t, T8.joke0 - 0.2, 0.5));
+    if (ca > 0) {
+      ctx.save(); ctx.globalAlpha = ca; ctx.translate(cx, cy + Math.sin(t * 1.5) * 8);
+      ctx.fillStyle = 'rgba(10,24,44,0.95)'; ctx.strokeStyle = C.wh; ctx.lineWidth = 3; glow('rgba(200,235,255,0.5)', 22);
+      ctx.beginPath(); [[-120, 10, 70], [-40, -40, 90], [60, -30, 80], [130, 20, 60], [0, 30, 80]].forEach(([x, y, r]) => { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, TAU); }); ctx.fill(); noGlow();
+      ctx.beginPath(); [[-120, 10, 70], [-40, -40, 90], [60, -30, 80], [130, 20, 60], [0, 30, 80]].forEach(([x, y, r]) => { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, TAU); }); ctx.stroke();
+      ctx.fillStyle = 'rgba(10,24,44,1)'; ctx.beginPath(); [[-120, 10, 68], [-40, -40, 88], [60, -30, 78], [130, 20, 58], [0, 30, 78]].forEach(([x, y, r]) => { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, TAU); }); ctx.fill();
+      T('$100 000', 0, -5, { s: 46, w: 800, f: MONO, c: C.wh });
+      ctx.restore();
+      const R = RNG('ha');
+      for (let i = 0; i < 7; i++) {
+        const t0 = T8.joke - 0.1 + i * 0.09; if (t < t0) continue;
+        const k = SPR(t, t0, 2.6, 0.4), ang = -2.6 + i * 0.75 + R() * 0.2, d = 230 + R() * 50;
+        T('ХА', cx + Math.cos(ang) * d, cy + Math.sin(ang) * d * 0.6 + Math.sin(t * 12 + i) * 6, { s: 30 + R() * 10, w: 900, c: C.cyL, a: clamp(k), sc: k, g: 10 });
+      }
+      pill('ПРОСТО ШУТКА', cx, cy + 150, t, T8.joke + 0.05);
+    }
+  },
+  { type: 'whip', d: 0.45, dir: [0, -1] });
+sfx('whoosh_big', T8.t0 - 0.25, -8); sfx('pop', T8.imp, -6); sfx('whoosh', T8.joke0 - 0.3, -14); sfx('laugh', T8.joke - 0.05, -8); sfx('pop', T8.joke + 0.05, -10);
+
+// ---- 9: what he can't see yet (the silence before the payoff)
+const T9 = { t0: T8.end, q: WT('blind', 3), see: WT('blind', 5), end: 39.75 };
+const ICONS = [[1150, 540], [1360, 540], [1570, 540]];
+scene('blind', T9.t0, T9.end,
+  camKeys([[T9.t0, { x: 900, y: 600, z: 1.0, dim: 0.5 }], [T9.end, { x: 960, y: 590, z: 1.1, dim: 0.8 }]], E.sine),
+  (t) => {
+    floorGrid(t, GY + 120, 0, 0.4);
+    stairs(t, 0.55);
+    hero(ST.x0 - 150, ST.y0, 70, { t, lean: -0.12 });
+    ICONS.forEach(([x, y], i) => {
+      const k = SPR(t, T9.t0 + 0.35 + i * 0.16, 2.2, 0.5); if (k <= 0) return;
+      ctx.save(); ctx.translate(x, y); ctx.scale(k, k); ctx.rotate(t * 0.4 * (i % 2 ? -1 : 1));
+      ctx.setLineDash([7, 9]); ctx.strokeStyle = 'rgba(200,220,245,0.75)'; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(0, 0, 62, 0, TAU); ctx.stroke(); ctx.restore();
+      T('?', x, y + 2, { s: 46, w: 800, c: C.wh, a: clamp(k), sc: k });
+    });
+    pill('ЧЕГО ОН ПОКА НЕ ВИДИТ', 1360, 410, t, T9.see, { dark: 'rgba(200,220,245,0.7)' });
+  },
+  { type: 'whip', d: 0.4, dir: [0, 1] });
+sfx('whoosh', T9.t0 - 0.2, -12); sfx('pop', T9.see, -14);
+
+// ============================================================
+//  scenes_c.js — 10 the summit (payoff) · 11 the post that hit + what people pay for · 12 product, clients, system · 13 repeat ×10
+// ============================================================
+// ---- 10: the summit. Hard cut on the impact, the three "?" ignite into what he learned.
+const T10 = { t0: 39.75, got: WT('top', 6), money: WT('top', 9), end: LN('knows').t0 - 0.12 };
+const SUM = { x: 560, y: 470 };   // summit (feet), stairs descend to the right
+function iconGlyph(kind, x, y, s, t) {
+  ctx.save(); ctx.translate(x, y); ctx.fillStyle = '#04223a'; ctx.strokeStyle = '#04223a'; ctx.lineWidth = 3;
+  if (kind === 0) heart(0, 4, s * 1.5, { c: '#04223a' });
+  if (kind === 1) { for (const [dx, sc] of [[-16, 0.8], [16, 0.8], [0, 1]]) { ctx.save(); ctx.translate(dx * s / 26, 0); hero(0, s * 0.55, s * 1.1 * sc, { fill: '#04223a', glow: 0 }); ctx.restore(); } }
+  if (kind === 2) gear(0, 0, s * 0.75, t * 1.2, { c: '#04223a', lw: 3.5, n: 8 });
+  ctx.restore();
+}
+const ICON_LAB = ['ЧТО ЦЕПЛЯЕТ', 'АУДИТОРИЯ', 'СИСТЕМА'];
+scene('top', T10.t0, T10.end,
+  camKeys([[T10.t0, { x: 980, y: 560, z: 1.12, r: 0.02 }], [T10.t0 + 1.2, { x: 990, y: 560, z: 1.02, r: 0 }], [T10.end, { x: 1040, y: 560, z: 1.08, r: -0.01 }]], E.o),
+  (t) => {
+    const tau = t - T10.t0;
+    // light rays behind the hero
+    ctx.save(); ctx.translate(SUM.x, SUM.y - 90); ctx.rotate(t * 0.15);
+    const ra = 0.16 + 0.5 * Math.exp(-tau * 2.5);
+    for (let i = 0; i < 18; i++) { ctx.rotate(TAU / 18); const g = ctx.createLinearGradient(0, 0, 900, 0); g.addColorStop(0, `rgba(120,210,255,${ra})`); g.addColorStop(1, 'rgba(120,210,255,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(900, -40); ctx.lineTo(900, 40); ctx.fill(); }
+    ctx.restore();
+    // stairs going down-right from the summit
+    const pts = [[SUM.x - 500, SUM.y], [SUM.x + 90, SUM.y]];
+    for (let i = 0; i < 8; i++) { const x = SUM.x + 90 + i * 120, y = SUM.y + i * 74; pts.push([x, y + 74], [x + 120, y + 74]); }
+    ctx.save(); ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.lineTo(2400, 1400); ctx.lineTo(SUM.x - 500, 1400); ctx.closePath();
+    const g = ctx.createLinearGradient(0, SUM.y, 0, 1200); g.addColorStop(0, 'rgba(40,120,180,0.5)'); g.addColorStop(1, 'rgba(6,18,36,0.2)'); ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    line(pts, { c: 'rgba(210,235,255,0.95)', lw: 3, g: 12 });
+    hero(SUM.x, SUM.y, 120, { t, hop: tau < 0.5 ? Math.sin(tau / 0.5 * Math.PI) * 26 : 0 });
+    // burst particles
+    const R = RNG('burst');
+    for (let i = 0; i < 70; i++) {
+      const ang = R() * TAU, sp = 300 + R() * 900, k = tau * (0.5 + R() * 0.5); if (k > 1.6) continue;
+      const x = SUM.x + Math.cos(ang) * sp * (1 - Math.exp(-k * 2)) / 2, y = SUM.y - 70 + Math.sin(ang) * sp * (1 - Math.exp(-k * 2)) / 2 + k * k * 40;
+      ctx.save(); ctx.globalAlpha = clamp(1 - k / 1.6) * 0.9; ctx.fillStyle = R() > 0.5 ? C.cyL : '#ffffff'; ctx.beginPath(); ctx.arc(x, y, 1.5 + R() * 3, 0, TAU); ctx.fill(); ctx.restore();
+    }
+    // $10 000 next to the hero; it steps back when "not just money"
+    const ma = 1 - 0.65 * E.io(P(t, T10.money, 0.5));
+    T('$10 000', SUM.x + 40, SUM.y - 185, { s: 54, w: 800, f: MONO, c: C.cy, g: 22, a: ma, sc: lerp(1, 0.82, E.io(P(t, T10.money, 0.5))) });
+    if (t > T10.money) { const k = E.o(P(t, T10.money + 0.05, 0.3)), w = TW('$10 000', 54, 800, MONO) * 0.82; line([[SUM.x + 40 - w / 2, SUM.y - 185], [SUM.x + 40 - w / 2 + w * k, SUM.y - 185]], { c: C.wh, lw: 4, a: 0.9 }); }
+    // the three icons ignite, staggered
+    ICONS.forEach(([x, y], i) => {
+      const k = SPR(t, T10.t0 + 0.05 + i * 0.12, 2.2, 0.38);
+      const big = 1 + 0.12 * E.io(P(t, T10.money, 0.5));
+      ctx.save(); ctx.translate(x, y + Math.sin(t * 1.6 + i) * 6); ctx.scale(k * big, k * big);
+      glow('rgba(68,198,255,0.95)', 40); ctx.fillStyle = C.cy; ctx.beginPath(); ctx.arc(0, 0, 62, 0, TAU); ctx.fill(); noGlow();
+      ctx.strokeStyle = 'rgba(230,248,255,0.8)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(0, 0, 72 + Math.sin(t * 3 + i) * 3, 0, TAU); ctx.stroke();
+      iconGlyph(i, 0, 0, 26, t);
+      ctx.restore();
+      T(ICON_LAB[i], x, y + 108, { s: 17, w: 800, c: C.wh, ls: 2, a: E.o(P(t, T10.got + i * 0.12, 0.3)) });
+    });
+  });
+sfx('impact', T10.t0 - 0.11, 0); shake(T10.t0, 26, 0.9);
+for (let i = 0; i < 3; i++) sfx('ding', T10.t0 + 0.05 + i * 0.12, -12 - i * 2);
+for (let i = 0; i < 3; i++) sfx('pop', T10.got + i * 0.12, -14);
+POSTO = (t) => {
+  const o = {};
+  if (t > T9.t0 && t < T10.t0) o.dark = 0.12 * E.io(P(t, T9.t0, 1.2));
+  if (t >= T10.t0 && t < T10.t0 + 0.45) { o.bloom = 1 + 2.2 * Math.exp(-(t - T10.t0) * 7); }
+  if (t > 74.9) o.dark = E.io(P(t, 74.9, 0.6));
+  return o;
+};
+
+// ---- 11: the post that hit, and what people actually pay for
+const T11 = { t0: T10.end, post: WT('knows', 3), hit: WT('knows', 4), pay0: WT('knows', 8), pay: WT('knows', 10), end: LN('system').t0 - 0.15 };
+scene('knows', T11.t0, T11.end,
+  camKeys([[T11.t0, { x: 780, y: 580, z: 1.12 }], [T11.hit + 0.4, { x: 800, y: 570, z: 1.16 }], [T11.pay0 - 0.2, { x: 1000, y: 570, z: 1.0 }], [T11.end, { x: 1040, y: 570, z: 1.04 }]]),
+  (t) => {
+    const gx0 = 760, gy0 = 600, tw = 170, th = 124, gap = 22;
+    const hit = E.o(P(t, T11.hit - 0.05, 0.35)), payA = E.o(P(t, T11.pay0 - 0.3, 0.5));
+    for (let r = -1; r <= 1; r++) for (let c = -1; c <= 1; c++) {
+      if (!r && !c) continue;
+      const x = gx0 + c * (tw + gap), y = gy0 + r * (th + gap), k = SPR(t, T11.t0 + 0.05 + (r + 1 + c + 1) * 0.04, 2.6, 0.55);
+      ctx.save(); ctx.translate(x, y); ctx.scale(k, k); ctx.globalAlpha = 1 - hit * 0.55;
+      card(-tw / 2, -th / 2, tw, th, { r: 12, lw: 2, sc: 'rgba(190,210,240,0.5)' });
+      ctx.fillStyle = 'rgba(190,210,240,0.3)'; rr(-tw / 2 + 14, -th / 2 + 14, tw - 28, 54, 8); ctx.fill();
+      T('♡ ' + (12 + ((r * 7 + c * 13 + 40) % 30)), -tw / 2 + 18, th / 2 - 22, { s: 14, w: 700, f: MONO, c: C.mu, al: 'left' });
+      ctx.restore();
+    }
+    // the hit post
+    {
+      const k = SPR(t, T11.t0 + 0.02, 2.6, 0.55), s = k * (1 + 0.32 * hit);
+      ctx.save(); ctx.translate(gx0, gy0 - hit * 14); ctx.scale(s, s);
+      card(-tw / 2, -th / 2, tw, th, { r: 12, lw: 2.5, fill: hit > 0 ? 'rgba(236,246,255,0.98)' : 'rgba(9,20,38,0.88)', glowc: hit > 0 ? 'rgba(160,225,255,0.9)' : null, gb: 40 });
+      ctx.fillStyle = hit > 0 ? 'rgba(40,90,140,0.5)' : 'rgba(190,210,240,0.3)'; rr(-tw / 2 + 14, -th / 2 + 14, tw - 28, 54, 8); ctx.fill();
+      const views = t < T11.hit ? 1139 : 1139 + (24000 - 1139) * E.o(P(t, T11.hit, 1.1));
+      T('▶ ' + num(views), 0, th / 2 - 24, { s: 18, w: 800, f: MONO, c: hit > 0 ? '#0a2a4a' : C.mu });
+      ctx.restore();
+      // hearts rising
+      if (t > T11.hit) { const R = RNG('hearts'); for (let i = 0; i < 16; i++) { const t0 = T11.hit + i * 0.1, k2 = (t - t0) / 1.3; if (k2 < 0 || k2 > 1) continue; heart(gx0 + (R() - 0.5) * 220 + Math.sin(k2 * 6 + i) * 18, gy0 - 90 - k2 * 260, 14 + R() * 12, { a: 1 - k2, g: 10, c: R() > 0.3 ? C.cy : C.wh }); } }
+      pill('ПОСТ, КОТОРЫЙ ВЫСТРЕЛИЛ', gx0, gy0 - 250, t, T11.hit + 0.1);
+    }
+    // what people pay for: the product card
+    if (payA > 0) {
+      const x = lerp(1900, 1420, payA), y = 590;
+      line([[gx0 + 120, gy0], [x - 150, y]], { c: 'rgba(160,210,250,0.7)', lw: 2.5, dash: [6, 10], off: -t * 40, a: payA });
+      ctx.save(); ctx.translate(x, y);
+      card(-140, -150, 280, 300, { r: 22, lw: 3, glowc: 'rgba(120,210,255,0.7)', gb: 30 });
+      cube(0, -20, 52, t * 0.9, {});
+      const pk = SPR(t, T11.pay - 0.05, 2.4, 0.45);
+      ctx.save(); ctx.translate(60, 70); ctx.scale(pk, pk); ctx.fillStyle = C.cy; glow(C.cyGlow, 20); rr(-46, -22, 92, 44, 12); ctx.fill(); noGlow(); T('$49', 0, 1, { s: 26, w: 900, c: '#04223a' }); ctx.restore();
+      ctx.restore();
+      T('ЗА ЧТО ПЛАТЯТ', x, y + 190, { s: 18, w: 800, c: C.wh, ls: 2.5, a: E.o(P(t, T11.pay, 0.3)) });
+    }
+  },
+  { type: 'zoomin', d: 0.5, at: [1150, 540], to: [760, 600] });
+sfx('whoosh', T11.t0 - 0.2, -10); sfx('heart', T11.hit, -4); sfx('pop', T11.hit + 0.1, -10); sfx('whoosh', T11.pay0 - 0.3, -12); sfx('ding', T11.pay - 0.05, -8);
+
+// ---- 12: product, first clients, a system that doesn't run on luck
+const T12 = { t0: T11.end, prod: WT('system', 3), cli: WT('system', 5), sys: WT('system', 7), luck0: WT('system', 10), luck: WT('system', 13), end: LN('battle').t0 - 0.1 };
+scene('system', T12.t0, T12.end,
+  camKeys([[T12.t0, { x: 960, y: 600, z: 1.18, r: 0.015 }], [T12.cli + 0.3, { x: 960, y: 590, z: 1.02, r: 0 }], [T12.sys + 0.5, { x: 1060, y: 580, z: 0.98, r: -0.012 }], [T12.luck, { x: 900, y: 590, z: 1.0, r: 0.008 }], [T12.end, { x: 940, y: 590, z: 1.04 }]]),
+  (t) => {
+    const cx = 960, cy = 600;
+    // orbit (3D ellipse): back half first, then cube, then front half
+    const ca = E.o(P(t, T12.cli - 0.3, 0.5));
+    const nCli = t < T12.cli - 0.1 ? 0 : Math.min(6, 1 + Math.floor((t - T12.cli + 0.1) / 0.11));
+    const cl = Array.from({ length: 6 }, (_, i) => { const a = t * 0.35 + (i / 6) * TAU; return { i, a, x: cx + Math.cos(a) * 360, y: cy + 40 + Math.sin(a) * 120, d: Math.sin(a) }; });
+    ctx.save(); ctx.globalAlpha = ca * 0.6; ctx.strokeStyle = 'rgba(150,200,245,0.6)'; ctx.lineWidth = 2; ctx.setLineDash([4, 10]); ctx.beginPath(); ctx.ellipse(cx, cy + 40, 360, 120, 0, Math.PI, TAU); ctx.stroke(); ctx.restore();
+    const drawCli = (c) => { if (c.i >= nCli) return; const k = SPR(t, T12.cli - 0.1 + c.i * 0.11, 2.6, 0.5), s = 0.72 + 0.28 * (c.d + 1) / 2; hero(c.x, c.y + 40, 70 * s * k, { t, ph: c.i, c: '#e9f4ff', c2: '#ffffff', gc: 'rgba(200,235,255,0.6)', glow: 14, a: 0.55 + 0.45 * (c.d + 1) / 2 }); };
+    cl.filter((c) => c.d < 0).forEach(drawCli);
+    // the product
+    const pk = SPR(t, T12.prod - 0.15, 2.0, 0.45);
+    const fl = Math.sin(t * 1.4) * 10;
+    ctx.save(); ctx.globalAlpha = 0.5; const sh = ctx.createRadialGradient(cx, cy + 120, 10, cx, cy + 120, 150); sh.addColorStop(0, 'rgba(68,198,255,0.5)'); sh.addColorStop(1, 'rgba(68,198,255,0)'); ctx.fillStyle = sh; ctx.beginPath(); ctx.ellipse(cx, cy + 120, 150, 30, 0, 0, TAU); ctx.fill(); ctx.restore();
+    if (pk > 0) cube(cx, cy - 20 + fl, 78 * pk, t * 0.6 + 0.5, {});
+    pill('ПРОДУКТ', cx, cy - 190, t, T12.prod);
+    ctx.save(); ctx.globalAlpha = ca * 0.6; ctx.strokeStyle = 'rgba(150,200,245,0.6)'; ctx.lineWidth = 2; ctx.setLineDash([4, 10]); ctx.beginPath(); ctx.ellipse(cx, cy + 40, 360, 120, 0, 0, Math.PI); ctx.stroke(); ctx.restore();
+    cl.filter((c) => c.d >= 0).forEach(drawCli);
+    // counter
+    T('КЛИЕНТЫ', 330, 330, { s: 17, w: 800, c: C.mu, ls: 2.5, a: ca });
+    T(String(nCli), 330, 385, { s: 56, w: 900, c: C.cy, g: 16, a: ca, sc: 1 + 0.15 * Math.max(0, Math.sin(Math.PI * clamp(((t - T12.cli + 0.1) % 0.11) / 0.11))) * (nCli < 6 ? 1 : 0) });
+    // the system: interlocking gears with pulses to the product
+    const sa = SPR(t, T12.sys - 0.1, 2.0, 0.5);
+    if (sa > 0) {
+      const gx = 1600, gyy = 560, spin = (t - T12.sys) * 1.6;
+      ctx.save(); ctx.translate(gx, gyy); ctx.scale(sa, sa);
+      gear(-34, -20, 54, spin, { n: 10, g: 14, lw: 3 }); gear(42, 48, 38, -spin * 1.42 + 0.3, { n: 8, g: 12, lw: 3 }); gear(-46, 74, 26, -spin * 2.1, { n: 6, lw: 2.6 });
+      ctx.restore();
+      T('СИСТЕМА', gx, gyy + 150, { s: 18, w: 800, c: C.wh, ls: 2.5, a: clamp(sa) });
+      const path = [[gx - 100, gyy], [cx + 110, cy - 20]];
+      line(path, { c: 'rgba(150,210,250,0.5)', lw: 2, dash: [5, 9], a: clamp(sa) });
+      for (let k = 0; k < 4; k++) { const f = ((t - T12.sys) * 0.8 + k / 4) % 1, p = ptAt(path, f); ctx.save(); glow(C.cyGlow, 14); ctx.fillStyle = C.cyL; ctx.globalAlpha = clamp(sa) * Math.sin(f * Math.PI); ctx.beginPath(); ctx.arc(p[0], p[1], 5, 0, TAU); ctx.fill(); ctx.restore(); }
+    }
+    // luck: a die that gets crossed out and falls away
+    const da = E.o(P(t, T12.luck0 - 0.4, 0.4));
+    if (da > 0) {
+      const drop = E.i2(P(t, T12.luck + 0.45, 0.6));
+      const dx = 330, dy = 640 + drop * 500;
+      ctx.save(); ctx.globalAlpha = da * (1 - drop * 0.8); ctx.translate(dx, dy); ctx.rotate(-0.2 + drop * 1.4 + Math.sin(t * 2) * 0.05);
+      card(-48, -48, 96, 96, { r: 16, lw: 3, sc: 'rgba(200,215,235,0.8)' });
+      ctx.fillStyle = C.wh; [[-22, -22], [22, 22], [0, 0], [22, -22], [-22, 22]].forEach(([x, y]) => { ctx.beginPath(); ctx.arc(x, y, 7, 0, TAU); ctx.fill(); });
+      ctx.restore();
+      T('УДАЧА', dx, 740 + drop * 500, { s: 17, w: 800, c: C.mu, ls: 2.5, a: da * (1 - drop) });
+      xmark(dx + 56, dy - 56, 22, SPR(t, T12.luck - 0.05, 2.6, 0.45));
+    }
+  },
+  { type: 'whip', d: 0.45, dir: [1, 0] });
+sfx('whoosh', T12.t0 - 0.2, -10); sfx('pop', T12.prod, -6);
+for (let i = 0; i < 6; i++) sfx('pop', T12.cli - 0.1 + i * 0.11, -14 - i);
+sfx('gear', T12.sys - 0.05, -6); sfx('tick', T12.luck - 0.05, -6); sfx('whoosh', T12.luck + 0.45, -16);
+
+// ---- 13: not a new battle — repeat what works, nine more times
+const BEAT8 = 0.3, GRID0B = 39.75;   // music part B: 100 BPM, first beat at 39.75
+const T13 = { t0: T12.end, first: WT('battle', 0) + 0.15, battle: WT('battle', 8), rep: WT('repeat', 1), end: LN('notmoney').t0 - 0.15 };
+const FILLS = Array.from({ length: 9 }, (_, k) => GRID0B + Math.ceil((T13.rep + 0.25 - GRID0B) / BEAT8) * BEAT8 + k * BEAT8);
+const slotXY = (i) => [960 - 2 * 210 + (i % 5) * 210, 470 + Math.floor(i / 5) * 118];
+scene('repeat', T13.t0, T13.end,
+  (t) => {
+    const base = camKeys([[T13.t0, { x: 960, y: 560, z: 1.12 }], [T13.rep, { x: 960, y: 560, z: 1.0 }], [T13.end, { x: 960, y: 560, z: 1.1 }]])(t);
+    for (const f of FILLS) if (t > f) base.z += 0.012 * Math.exp(-(t - f) * 10);
+    return base;
+  },
+  (t) => {
+    T('ЦЕЛЬ: $100 000', 960, 330, { s: 22, w: 800, c: C.mu, ls: 3, a: E.o(P(t, T13.t0, 0.4)) });
+    const done = FILLS.filter((f) => t >= f).length + (t >= T13.first ? 1 : 0);
+    for (let i = 0; i < 10; i++) {
+      const [x, y] = slotXY(i), k = SPR(t, T13.t0 + 0.05 + i * 0.03, 2.8, 0.6);
+      ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
+      ctx.setLineDash([6, 8]); ctx.strokeStyle = 'rgba(170,200,235,0.5)'; ctx.lineWidth = 2; rr(-92, -46, 184, 92, 14); ctx.stroke(); ctx.setLineDash([]);
+      ctx.restore();
+      const ft = i === 0 ? T13.first : FILLS[i - 1];
+      if (t < ft - 0.25) continue;
+      // a copy of the first block flies to its slot (repeat what already works)
+      const [x0, y0] = slotXY(0), fk = i === 0 ? 1 : E.o5(clamp((t - ft + 0.25) / 0.25));
+      const px = lerp(x0, x, fk), py = lerp(y0, y, fk) - Math.sin(fk * Math.PI) * 50;
+      const land = t - ft, sq = land > 0 ? Math.exp(-land * 12) * Math.sin(land * 40) * 0.08 : 0;
+      ctx.save(); ctx.translate(px, py); ctx.scale(1 + sq, 1 - sq);
+      if (i === 0) { const k0 = SPR(t, T13.first, 2.6, 0.45); ctx.scale(k0, k0); }
+      glow('rgba(68,198,255,0.9)', land > 0 && land < 0.25 ? 50 : 24); ctx.fillStyle = C.cy; rr(-92, -46, 184, 92, 14); ctx.fill(); noGlow();
+      ctx.strokeStyle = '#04223a'; ctx.lineWidth = 4; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(-58, 0); ctx.lineTo(-46, 12); ctx.lineTo(-26, -12); ctx.stroke();
+      T('×' + (i + 1), 22, 2, { s: 30, w: 900, c: '#04223a' });
+      ctx.restore();
+    }
+    const val = done * 10000;
+    const allDone = t >= FILLS[8];
+    T('ЧТО УЖЕ РАБОТАЕТ', 960, 750, { s: 18, w: 800, c: C.mu, ls: 3, a: E.o(P(t, T13.first, 0.3)) });
+    T(money(val), 960, 820, { s: allDone ? 78 : 62, w: 800, f: MONO, c: allDone ? C.cy : C.wh, g: allDone ? 26 : 0, a: E.o(P(t, T13.first, 0.3)), sc: 1 + 0.06 * Math.exp(-Math.max(0, t - Math.max(...FILLS.filter((f) => t >= f), 0)) * 9) });
+    pill('НЕ НОВАЯ БИТВА', 960, 650, t, T13.battle, { a: 1 - P(t, T13.rep, 0.3) });
+    if (allDone) { const k = clamp((t - FILLS[8]) / 0.6); ctx.save(); ctx.globalAlpha = 1 - k; ctx.strokeStyle = C.cyL; ctx.lineWidth = 3; glow(C.cyGlow, 30); rr(960 - 520 - k * 40, 410 - k * 30, 1040 + k * 80, 240 + k * 60, 24); ctx.stroke(); ctx.restore(); }
+  },
+  { type: 'zoom', d: 0.5, at: [960, 580], to: [960, 470] });
+sfx('whoosh', T13.t0 - 0.25, -10); sfx('pop', T13.first, -4); sfx('pop', T13.battle, -8);
+FILLS.forEach((f, k) => sfx('slots', f, -8 + k * 0.4, { rate: Math.pow(2, [0, 2, 4, 5, 7, 9, 11, 12, 14][k] / 12) }));
+sfx('ding', FILLS[8] + 0.02, -4);
+
+// ============================================================
+//  scenes_d.js — 14 coins become a machine · 15 the hill again (the machine does the pushing) · 16 title
+// ============================================================
+// the machine, in local coords (body 320x210 centred at 0,0). k: per-part assembly 0..1, on: running 0..1
+const MPARTS = ['body', 'gearA', 'gearB', 'funnel', 'chimney', 'chute'];
+function machine(x, y, s, t, k = {}, on = 0, from = null) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  const part = (name, fn) => {
+    const kk = k[name] == null ? 1 : k[name]; if (kk <= 0) return;
+    ctx.save();
+    if (from && kk < 1) { const [fx, fy, fr] = from[name]; const u = 1 - E.o5(kk); ctx.translate(fx * u, fy * u); ctx.rotate(fr * u); }
+    ctx.globalAlpha *= clamp(kk * 3); fn(); ctx.restore();
+  };
+  const st = 'rgba(214,236,255,0.95)', spin = on > 0 ? (t - 65.0) * 2.4 * on : 0;
+  part('chimney', () => {
+    ctx.strokeStyle = st; ctx.lineWidth = 3.5; ctx.fillStyle = 'rgba(8,22,42,0.95)';
+    rr(80, -175, 36, 72, 6); ctx.fill(); ctx.stroke(); rr(72, -186, 52, 16, 5); ctx.fill(); ctx.stroke();
+    if (on > 0) for (let i = 0; i < 6; i++) { const ph = ((t * 0.9 + i / 6) % 1); ctx.save(); ctx.globalAlpha *= on * (1 - ph) * 0.55; ctx.fillStyle = '#bfe6ff'; ctx.filter = 'blur(3px)'; ctx.beginPath(); ctx.arc(98 + Math.sin(ph * 6 + i) * 12 + ph * 30, -200 - ph * 110, 10 + ph * 22, 0, TAU); ctx.fill(); ctx.restore(); }
+  });
+  part('funnel', () => {
+    ctx.strokeStyle = st; ctx.lineWidth = 3.5; ctx.fillStyle = C.cy; glow(C.cyGlow, 20);
+    ctx.beginPath(); ctx.moveTo(-130, -170); ctx.lineTo(-30, -170); ctx.lineTo(-60, -105); ctx.lineTo(-100, -105); ctx.closePath(); ctx.fill(); noGlow();
+  });
+  part('body', () => {
+    ctx.fillStyle = 'rgba(8,22,42,0.96)'; ctx.strokeStyle = st; ctx.lineWidth = 4; glow('rgba(120,210,255,0.6)', 26 + 20 * on);
+    rr(-160, -105, 320, 210, 22); ctx.fill(); noGlow(); rr(-160, -105, 320, 210, 22); ctx.stroke();
+    for (let i = 0; i < 3; i++) { const lit = on > 0 && Math.sin(t * 8 - i * 1.3) > 0; ctx.fillStyle = lit ? C.cyL : 'rgba(120,150,190,0.5)'; if (lit) glow(C.cyGlow, 14); ctx.beginPath(); ctx.arc(64 + i * 30, -70, 7, 0, TAU); ctx.fill(); noGlow(); }
+  });
+  part('gearA', () => gear(-62, 12, 58, spin, { n: 10, lw: 3.5, g: 10 + 14 * on }));
+  part('gearB', () => gear(48, 40, 38, -spin * 1.5 + 0.2, { n: 8, lw: 3.5, g: 8 + 12 * on }));
+  part('chute', () => {
+    ctx.strokeStyle = st; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(160, 40); ctx.lineTo(250, 92); ctx.moveTo(160, 82); ctx.lineTo(232, 124); ctx.stroke();
+  });
+  ctx.restore();
+}
+
+// ---- 14: the first $10 000 is a stack of coins... it's not about money: it becomes a machine
+const T14 = { t0: T13.end, ten: WT('notmoney', 1), money: WT('notmoney', 6), burst: WT('notmoney', 6) + 0.45, build: WT('machine', 4), on: WT('machine', 5), end: LN('easier').t0 - 0.1 };
+const MC = { x: 960, y: 600 };
+const PART_T = MPARTS.map((n, i) => T14.burst + 0.42 + i * 0.2);
+const COINP = (() => { const R = RNG('coinburst'); return Array.from({ length: 10 }, (_, i) => ({ ang: -Math.PI / 2 + (R() - 0.5) * 2.6, d: 260 + R() * 220, spin: (R() - 0.5) * 16 })); })();
+const MFROM = {}; MPARTS.forEach((n, i) => { const c = COINP[i]; MFROM[n] = [Math.cos(c.ang) * c.d, -110 + Math.sin(c.ang) * c.d * 0.8 - 40, c.spin * 0.2]; });
+scene('coins', T14.t0, T14.end,
+  camKeys([[T14.t0, { x: 960, y: 610, z: 1.04 }], [T14.ten + 0.3, { x: 960, y: 620, z: 1.16, r: 0.01 }], [T14.burst, { x: 960, y: 590, z: 0.96, r: -0.01 }], [T14.on, { x: 960, y: 600, z: 1.06 }], [T14.end, { x: 960, y: 600, z: 1.1 }]]),
+  (t) => {
+    // contact shadow
+    ctx.save(); const sg = ctx.createRadialGradient(MC.x, 720, 10, MC.x, 720, 260); sg.addColorStop(0, 'rgba(68,198,255,0.25)'); sg.addColorStop(1, 'rgba(68,198,255,0)'); ctx.fillStyle = sg; ctx.beginPath(); ctx.ellipse(MC.x, 718, 260, 40, 0, 0, TAU); ctx.fill(); ctx.restore();
+    const burstK = clamp((t - T14.burst) / 0.45);
+    // the coin stack: falls in, then bursts
+    for (let i = 0; i < 10; i++) {
+      const t0 = T14.t0 + 0.05 + i * 0.07, k = clamp((t - t0) / 0.22);
+      if (k <= 0) continue;
+      const sy = 700 - i * 15, y = lerp(sy - 420, sy, E.i2(k));
+      if (burstK <= 0) { coinFlat(MC.x, y, 86, { g: i === 9 ? 18 : 0 }); continue; }
+      const c = COINP[i], partT = PART_T[i];
+      if (i < 6 && t > partT - 0.4) continue;            // this coin has become a part
+      const bx = MC.x + Math.cos(c.ang) * c.d * E.o(burstK), by = sy - 110 + Math.sin(c.ang) * c.d * 0.8 * E.o(burstK) - 40 * burstK;
+      coin(bx, by, 26, { sx: Math.cos(t * c.spin), a: i >= 6 ? 1 - clamp((t - T14.burst - 0.6) / 0.5) : 1 });
+    }
+    // $10 000 label, struck through on "money"
+    const la = E.o(P(t, T14.ten - 0.05, 0.3)) * (1 - clamp((t - T14.burst) / 0.3));
+    if (la > 0) {
+      T('$10 000', MC.x, 470, { s: 64, w: 800, f: MONO, c: C.wh, a: la, g: 10 });
+      if (t > T14.money) { const k = E.o(P(t, T14.money, 0.28)), w = TW('$10 000', 64, 800, MONO); line([[MC.x - w / 2 - 10, 474], [MC.x - w / 2 - 10 + (w + 20) * k, 474]], { c: C.cy, lw: 6, g: 14, a: la }); }
+    }
+    // the machine assembles from the coins
+    if (t > PART_T[0] - 0.45) {
+      const k = {}; MPARTS.forEach((n, i) => (k[n] = clamp((t - PART_T[i] + 0.4) / 0.4)));
+      machine(MC.x, MC.y, 1.0, t, k, E.o(P(t, T14.on, 0.5)), MFROM);
+    }
+    // first coins come out
+    if (t > T14.on + 0.3) for (let j = 0; j < 4; j++) { const t0 = T14.on + 0.35 + j * 0.28, u = (t - t0) / 0.7; if (u < 0 || u > 1) continue; coin(MC.x + 250 + u * 260, MC.y + 110 + u * u * 140, 18, { sx: Math.cos(t * 9), a: 1 - u }); }
+  },
+  { type: 'zoom', d: 0.45, at: [960, 600], to: [960, 620] });
+sfx('whoosh', T14.t0 - 0.2, -12);
+for (let i = 0; i < 10; i++) sfx('tick', T14.t0 + 0.05 + i * 0.07 + 0.2, -10);
+sfx('whoosh', T14.money - 0.05, -14); sfx('shatter', T14.burst, -12); sfx('whoosh_big', T14.burst, -12);
+MPARTS.forEach((n, i) => sfx(i < 3 ? 'gear' : 'tick', PART_T[i], i < 3 ? -6 : -8));
+sfx('machine', T14.on + 0.05, -6); sfx('ding', T14.on + 0.05, -10);
+BLURW.push([T14.burst, T14.burst + 0.45]);
+
+// ---- 15: the hill from the opening — now the machine sits on the crest and the money rolls down by itself
+const T15 = { t0: T14.end, each: WT('easier', 4), easy: WT('easier', 8), end: LN('outro').t0 - 0.16 };
+const MS = 0.5, MW = { x: 1150, y: 330 - 105 * MS };   // machine on the crest
+const CHUTE = [MW.x + 241 * MS, MW.y + 108 * MS];
+const NCOIN = 70;
+const coinT = (j) => T15.t0 + 0.15 + (T15.end - T15.t0 + 0.6) * Math.pow(j / NCOIN, 0.62);   // inter-arrival keeps shrinking
+const coinX = (tau) => CHUTE[0] + 30 * tau + 520 * tau * tau;
+const income = (t) => 15800 * Math.exp(0.5 * Math.max(0, t - T15.t0 - 0.2));
+scene('hill2', T15.t0, T15.end + 0.4,
+  camKeys([[T15.t0, { x: MW.x, y: MW.y, z: 2.2 }], [T15.t0 + 1.5, { x: 1350, y: 470, z: 0.8, r: 0.04 }], [T15.end, { x: 1850, y: 640, z: 0.66, r: 0.09 }]], E.io),
+  (t) => {
+    const vis = HILL.filter(([x]) => x > -500 && x < 5000);
+    ctx.save(); ctx.beginPath(); vis.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.lineTo(5000, 3500); ctx.lineTo(-500, 3500); ctx.closePath();
+    const gf = ctx.createLinearGradient(0, 300, 0, 1600); gf.addColorStop(0, 'rgba(20,60,110,0.4)'); gf.addColorStop(1, 'rgba(4,10,20,0)'); ctx.fillStyle = gf; ctx.fill(); ctx.restore();
+    line(vis, { c: 'rgba(214,232,255,0.9)', lw: 3.2, g: 10, gc: 'rgba(120,200,255,0.5)' });
+    ticks(vis, t, { n: 160, seed: 'hill' });
+    machine(MW.x, MW.y, MS, t, {}, 1);
+    // the hero, relaxed, beside the machine
+    const [hx, hy] = onHill(MW.x - 150, 0); hero(hx, hy, 62, { t, lean: -0.05 });
+    // coins roll down, faster and faster; a growing ball leads them (the snowball from the opening)
+    let lead = 0;
+    for (let j = 0; j < NCOIN; j++) {
+      const tau = t - coinT(j); if (tau < 0) continue;
+      const x = coinX(tau); if (x > 4900) continue;
+      lead = Math.max(lead, x);
+      const [cx, cy] = x < CHUTE[0] + 60 ? [x, lerp(CHUTE[1], onHill(x, 14)[1], clamp((x - CHUTE[0]) / 60))] : onHill(x, 14);
+      coin(cx, cy, 14, { sx: Math.cos(tau * 12 + j), g: 12 });
+    }
+    const n = Math.max(0, Math.min(NCOIN, Math.floor(NCOIN * Math.pow(clamp((t - T15.t0 - 0.15) / (T15.end - T15.t0 + 0.6)), 1 / 0.62))));
+    if (lead > CHUTE[0] + 200) { const r = 30 + n * 1.5; const [bx, by] = onHill(lead + r * 0.6, r); glowBall(bx, by, r, (lead) / r, null, t); }
+    // the old struggle, faint: the uphill side, empty
+  },
+  { type: 'cut', d: 0 });
+BLURW.push([T15.t0 + 0.2, T15.t0 + 1.4]);
+sfx('whoosh_big', T15.t0 + 0.1, -10); sfx('roll', T15.t0 + 1.0, -8); sfx('roll', T15.t0 + 2.6, -6);
+for (let j = 0; j < 26; j++) sfx('coin', coinT(j * 2) + 0.05, -22 + j * 0.25, { rate: 1 + (j % 5) * 0.08 });
+// HUD: income, drawn at screen size on top of the hill scene
+const HUD = (t) => {
+  if (t < T15.t0 + 0.3 || t > T15.end + 0.4) return;
+  const a = E.o(P(t, T15.t0 + 0.3, 0.4)) * (1 - P(t, T15.end, 0.4));
+  const x = 1720, y = 300;
+  ctx.save(); ctx.globalAlpha = a;
+  T('ДОХОД', x, y, { s: 18, w: 800, c: C.mu, ls: 3, al: 'right' });
+  T(money(income(t)), x, y + 56, { s: 60, w: 800, f: MONO, c: C.cy, g: 22, al: 'right' });
+  // exponential sparkline
+  const pts = []; for (let i = 0; i <= 40; i++) { const tt = T15.t0 + 0.2 + (t - T15.t0 - 0.2) * i / 40; pts.push([x - 300 + 300 * i / 40, y + 170 - 90 * (income(tt) - 15800) / (140000 - 15800)]); }
+  line([[x - 300, y + 172], [x, y + 172]], { c: 'rgba(160,190,225,0.5)', lw: 2 });
+  line(pts, { c: C.cy, lw: 3.5, g: 14 });
+  ctx.restore();
+};
+
+// ---- 16: title
+const T16 = { t0: T15.end, w1: WT('outro', 0), w2: WT('outro', 1), sub: WT('outro', 2) };
+CAP_HIDE = (t) => t > T16.t0 + 0.1;
+scene('title', T16.t0, DURATION + 0.1,
+  camKeys([[T16.t0, { x: 960, y: 540, z: 1.0 }], [DURATION, { x: 960, y: 535, z: 1.07 }]], E.sine),
+  (t) => {
+    const S = 150, words = [['СТРОЙ', T16.w1, C.wh], ['МАШИНУ.', T16.w2, C.cy]];
+    const ws = words.map(([w]) => TW(w, S, 900, SANS, 2)), gap = 44, tot = ws[0] + ws[1] + gap;
+    let x = W / 2 - tot / 2;
+    words.forEach(([w, t0, c], wi) => {
+      let xx = x;
+      for (let i = 0; i < w.length; i++) {
+        const ch = w[i], cw = TW(ch, S, 900, SANS, 2), k = SPR(t, t0 - 0.08 + i * 0.035, 2.2, 0.55), a = clamp((t - t0 + 0.08 - i * 0.035) / 0.12);
+        T(ch, xx + cw / 2, 470 + (1 - k) * 90, { s: S, w: 900, c, ls: 2, a, g: wi ? 30 : 0, sc: 0.8 + 0.2 * k });
+        xx += cw;
+      }
+      x += ws[wi] + gap;
+    });
+    const subs = ['ДЕНЬГИ', 'ПРИДУТ', 'СЛЕДОМ'], st = [T16.sub, WT('outro', 3), WT('outro', 4)];
+    const sw = subs.map((s) => TW(s, 38, 600, SANS, 10)), sg = 30, stot = sw.reduce((a, b) => a + b, 0) + sg * 2;
+    let sx = W / 2 - stot / 2;
+    subs.forEach((s, i) => { const k = E.o(P(t, st[i] - 0.05, 0.35)); T(s, sx + sw[i] / 2, 610 + (1 - k) * 20, { s: 38, w: 600, c: C.mu, ls: 10, a: k }); sx += sw[i] + sg; });
+    // a small closing vignette: the machine and its stream, the hero walking with it
+    const va = E.o(P(t, T16.sub + 0.4, 0.6));
+    if (va > 0) {
+      ctx.save(); ctx.globalAlpha = va;
+      line([[560, 860], [1360, 860]], { c: 'rgba(200,225,255,0.6)', lw: 2 });
+      machine(700, 860 - 105 * 0.34, 0.34, t, {}, 1);
+      for (let j = 0; j < 8; j++) { const ph = ((t * 0.45 + j / 8) % 1); coin(790 + ph * 520, 848, 9, { sx: Math.cos(t * 8 + j), a: Math.sin(ph * Math.PI), g: 8 }); }
+      hero(1330, 860, 48, { t });
+      ctx.restore();
+    }
+  },
+  { type: 'fade', d: 0.6 });
+sfx('whoosh', T16.w1 - 0.15, -10); sfx('thud', T16.w2 + 0.1, -6); sfx('ding', T16.w2 + 0.15, -10);
+
+// live preview in a browser: plays in real time (no audio); ?t=12.5 freezes a frame
+(function () {
+  const q = new URLSearchParams(location.search);
+  if (q.has('export')) return;
+  document.fonts.ready.then(() => {
+    if (q.has('t')) { renderFrame(parseFloat(q.get('t'))); return; }
+    const start = performance.now();
+    const tick = () => { const t = ((performance.now() - start) / 1000) % DURATION; renderFrame(Math.floor(t * FPS) / FPS); requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+})();
+</script></body></html>
